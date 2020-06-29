@@ -1138,7 +1138,7 @@ ul.circle li {
 /* line 66, ../sass/shared/_home.scss */
 #page .section-1 .content .container > div .left_in .txt {
   border: dashed 1px #fff;
-  padding: 30px;
+  padding: 30px 30px 15px 30px;
   box-sizing: border-box;
   border-radius: 25px;
   text-align: center;
@@ -1230,9 +1230,10 @@ ul.circle li {
 }
 /* line 139, ../sass/shared/_home.scss */
 #page .section-1 .content .container > div .right .right_in .awsugblr_logo {
-  display: block;
+  display: flex;
   margin: auto;
   text-align: center;
+  justify-content: center;
 }
 /* line 144, ../sass/shared/_home.scss */
 #page .section-1 .content .container > div .right .right_in .enlarge {
@@ -2163,7 +2164,8 @@ ul.circle li {
 }
 /* line 887, ../sass/shared/_home.scss */
 #page .section-6 {
-  padding: 100px 0 200px;
+  /* padding: 100px 0 200px; */
+  padding: 100px 0 100px;
   background: #fff;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
 }
@@ -2369,7 +2371,8 @@ ul.circle li {
 }
 /* line 1056, ../sass/shared/_home.scss */
 #page .section-7 {
-  margin: -50px auto 100px;
+  /* margin: -50px auto 100px; */
+  margin: 65px auto 100px;
 }
 @media only screen and (max-width: 991px) {
   /* line 1056, ../sass/shared/_home.scss */
@@ -2623,11 +2626,17 @@ ul.circle li {
 }
 /* line 1263, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_1 .bg_img {
-  background-image: url(../images/tick_work_1.svg);
+  background-image: url(../images/Amazon-Elastic-Container.png);
 }
 /* line 1268, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_2 .bg_img {
-  background-image: url(../images/tick_work_2.svg);
+  background-image: url(../images/Machine-Learning.svg);
+}
+#page .section-tickets .card.with_icon.tick_work_3 .bg_img {
+  background-image: url(../images/AWS-Lambda.svg);
+}
+#page .section-tickets .card.with_icon.tick_work_4 .bg_img {
+  background-image: url(../images/Amazon_Alexa.png);
 }
 /* line 1273, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.combo .bg_img {
@@ -2823,4 +2832,58 @@ i.icon.large {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+/* comingsoon text */
+.coming-soon{
+  font-size: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w-32px{
+  width: 32px;
+}
+.white-text{
+  color: #fff;
+}
+.btn-register-agenda {
+  width: 147px;
+  background: #ff9900;
+  border: 1px solid #ff9900;
+}
+.full-width{
+  width: 100%;
+    margin: auto;
+    flex: 100 !important;
+}
+.btn-register-section {
+  margin-top: 10px;
+}
+.btn-outline {
+  border: 1px solid #eea236;
+  width: 147px;
+  height: 40px;
+}
+.btn-outline:hover {
+  border: 1px solid #eea236;
+  background: #eea236;
+  color: #fff;
+}
+.btn-outline:focus {
+  border: 1px solid #eea236;
+  background: #eea236;
+  color: #fff;
+}
+.w-50 {
+  width: 50%;
+}
+@media (min-width:320px) and (max-width:768px){
+  .bottom-footer {
+    height: 105px;
+    margin-top: -50px;
+  }
+  .w-50 {
+    width: 100%;
+  }
 }

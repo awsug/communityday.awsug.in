@@ -57,7 +57,11 @@
 	padding-top: 80px;
 	margin: 0 auto;
 }
-
+/* new css for community 2020 logo */
+.code-of-conduct-logo img {
+	padding-top: 0px !important;
+	margin: 0 auto;
+  }
 .banner-main h3 span {
 	color: #fff;
 	font-size: 22px;

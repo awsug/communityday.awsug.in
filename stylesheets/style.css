@@ -2878,6 +2878,7 @@ i.icon.large {
 .w-50 {
   width: 50%;
 }
+
 @media (min-width:320px) and (max-width:768px){
   .bottom-footer {
     height: 105px;

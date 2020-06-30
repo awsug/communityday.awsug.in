@@ -2559,6 +2559,7 @@ ul.circle li {
     color: #ff9900;
     border: solid 1px #ff9900;
     box-shadow: none;
+    font-size: 13px; /* only for Announcing Soon button otherwise remove this */
   }
 }
 @media only screen and (min-width: 992px) {
@@ -2876,9 +2877,300 @@ i.icon.large {
   color: #fff;
 }
 .w-50 {
-  width: 50%;
+  width: 350px;
+}
+.text-black a{
+  color: #555;
 }
 
+
+/* register form css */
+.register-form-close-btn{
+    display: flex;
+    position: fixed;
+    right: -10px;
+    top: -1rem;
+    border: 1px solid #ff9900;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+.margin-25{
+  margin-top: 25px;
+}
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.register-form .modal-content{
+  border-radius: 0 !important;
+}
+.register-form .modal-dialog {
+  width: 490px;
+  /* margin: 30px auto; */
+}
+.form-title {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.btn-register {
+  width: 100%;
+  height: 35px !important;
+  line-height: 35px !important;
+}
+.form-title h3 {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 2rem;
+}
+.group {
+  position: relative;
+  margin-bottom: 30px;
+}
+.group input {
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(137, 137, 137, 0.5);
+  background: none;
+  color: #666;
+}
+.group input:focus {
+  outline: none;
+}
+/* LABEL ======================================= */
+
+.group label {
+  color: rgba(137, 137, 137, 0.7);
+  font-size: 15px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+/* active durum */
+
+.group input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: rgba(137, 137, 137, 0.7);
+}
+/* BOTTOM BARS ================================= */
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+/* active durum bar */
+
+.group input:focus ~ .bar:before,
+.group input:focus ~ .bar:after {
+  width: 50%;
+}
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+  position: absolute;
+  height: 0%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+/* active durum */
+
+.group input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+/* form animasyon ================ */
+
+@-webkit-keyframes inputHighlighter {
+  from {
+      background: rgba(255, 255, 255, 0.7);
+  }
+  to {
+      width: 0;
+      background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+      background: rgba(255, 255, 255, 0.7);
+  }
+  to {
+      width: 0;
+      background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+      background: rgba(255, 255, 255, 0.7);
+  }
+  to {
+      width: 0;
+      background: transparent;
+  }
+}
+.input-ikon {
+  font-size: 18px!important;
+  position: relative;
+}
+.input-sifre-ikon {
+  font-size: 15px!important;
+  position: relative;
+}
+.span-input {
+  margin-left: 10px;
+  position: relative;
+  top: 0px;
+}
+.accept-terms{
+  display: none;
+  font-size: 12px;
+}
+/* css for switch input */
+.consent-row{
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+.switch {
+}
+
+.switch input[type=checkbox] {
+    display: none;
+}
+
+.switch input[type=checkbox] + label {
+    position:relative;
+    min-width:calc(calc(2.375rem * .8) * 2);
+    border-radius:calc(2.375rem * .8);
+    height:calc(2.375rem * .8);
+    line-height:calc(2.375rem * .8);
+    display:inline-block;
+    cursor:pointer;
+    outline:none;
+    user-select:none;
+    vertical-align:middle;
+    text-indent:calc(calc(calc(2.375rem * .8) * 2) + .5rem);
+    font-weight: 400;
+    text-align: justify;
+    font-size: 12px;
+}
+.switch input[type=checkbox] + label::before,
+.switch input[type=checkbox] + label::after {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:calc(calc(2.375rem * .8) * 2);
+    bottom:0;
+    display:block;
+}
+.switch input[type=checkbox] + label::before {
+right:0;
+background-color:#dee2e6;
+border-radius:calc(2.375rem * .8);
+transition:.2s all;
+}
+.switch input[type=checkbox] + label::after {
+    top:2px;
+    left:2px;
+    width:calc(calc(2.375rem * .8) - calc(2px * 2));
+    height:calc(calc(2.375rem * .8) - calc(2px * 2));
+    border-radius:50%;
+    background-color:#fff;
+    transition: all 0.3s ease-in 0s;;
+}
+.switch input[type=checkbox]:checked + label::before {
+    background-color:#08d;
+}
+.switch input[type=checkbox]:checked + label::after {
+    margin-left:calc(2.375rem * .8);
+}
+.switch input[type=checkbox]:focus + label::before {
+    outline:none;
+    box-shadow:0 0 0 .2rem rgba(0,136,221,.25);
+}
+.switch input[type=checkbox]:disabled + label {
+    color:#868e96;
+    cursor:not-allowed;
+}
+.switch input[type=checkbox]:disabled + label::before {
+    background-color:#e9ecef;
+}
+
+.switch.switch-xs {
+    font-size:.8rem;
+}
+.switch.switch-xs input[type=checkbox] + label {
+    min-width:calc(calc(1.5375rem * .8) * 2);
+    height:calc(1.5375rem * .8);
+    line-height:calc(1.5375rem * .8);
+    text-indent:calc(calc(calc(1.5375rem * .8) * 2) + .5rem);
+}
+.switch.switch-xs input[type=checkbox] + label::before {
+    width:calc(calc(1.5375rem * .8) * 2);
+}
+.switch.switch-xs input[type=checkbox] + label::after {
+    width:calc(calc(1.5375rem * .8) - calc(2px * 2));
+    height:calc(calc(1.5375rem * .8) - calc(2px * 2));
+}
+.switch.switch-xs input[type=checkbox]:checked + label::after {
+    margin-left:calc(1.5375rem * .8);
+}
+.error {
+  display: none;
+  font-size: 12px;
+  margin-top: 5px;
+}
 @media (min-width:320px) and (max-width:768px){
   .bottom-footer {
     height: 105px;
@@ -2886,5 +3178,12 @@ i.icon.large {
   }
   .w-50 {
     width: 100%;
+  }
+ 
+}
+@media (min-width:320px) and (max-width:767px){
+  .register-form .modal-dialog {
+    width: auto;
+    /* margin: 30px auto; */
   }
 }

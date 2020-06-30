@@ -2146,7 +2146,7 @@
         });
         return false;
       }
-      if (phone.length == 13) {
+      if (phone.length <= 13) {
         var settings = {
           "url": "https://api.konfhub.com/event/acd",
           "method": "POST",

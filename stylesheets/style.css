@@ -2877,7 +2877,7 @@ i.icon.large {
   color: #fff;
 }
 .w-50 {
-  width: 350px;
+  width: 60%;
 }
 .text-black a{
   color: #555;
@@ -3176,14 +3176,13 @@ transition:.2s all;
     height: 105px;
     margin-top: -50px;
   }
-  .w-50 {
-    width: 100%;
-  }
- 
 }
 @media (min-width:320px) and (max-width:767px){
   .register-form .modal-dialog {
     width: auto;
     /* margin: 30px auto; */
+  }
+  .w-50 {
+    width: 100%;
   }
 }

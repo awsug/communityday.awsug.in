@@ -2015,6 +2015,15 @@
                 <span class="span-input">Phone Number <span class="text-danger">*</span></span>
               </label>
             </div>
+            <div class="group">
+              <input type="text" name="city" id="city" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>
+                <i class="input-sifre-ikon fa fa-map-marker"></i>
+                <span class="span-input">City <span class="text-danger">*</span></span>
+              </label>
+            </div>
             <div class="consent-row">
               <span class="switch">
                 <input type="checkbox" name="consent" class="switch" id="idChk-normal" value="false">
@@ -2026,8 +2035,16 @@
             <span class="accept-terms text-danger">
               Please check the terms and condition switch control
             </span>
-            <div class="form-group margin-25">
-              <input type="submit" class="btn btn-warning btn-register" value="Register">
+            <div class="form-group margin-25_">
+              <input type="submit" class="btn btn-warning btn-register" id="register-btn" value="Register">
+            </div>
+            <div class="powered-logo">
+              <a href="https://konfhub.com/privacypolicy.html" target="_blank"> <img src="images/powered-logo.png"
+                  class="img-responsive"></a>
+            </div>
+            <div class="form-group register-privacy-section">
+              <a href="https://konfhub.com/privacypolicy.html" target="_blank">KonfHub Technologies</a>
+              <a href="https://aws.amazon.com/legal/marketingentities/" target="_blank">Amazon Web Services</a>
             </div>
           </form>
         </div>
@@ -2038,6 +2055,7 @@
 
     </div>
   </div>
+  <div id="snackbar"> Thanks, Your registration has been done successfully. </div>
   <script type="text/javascript">
     var latt = 12.9767814;
     var lngg = 77.6197088;
@@ -2138,6 +2156,7 @@
       var designation = document.getElementById("designation").value;
       var organisation = document.getElementById("organisation").value;
       var phone = document.getElementById("phone_number").value;
+      var city = document.getElementById("city").value;
       var consent = document.getElementById("idChk-normal").value;
 
       if (!JSON.parse(consent)) {
@@ -2154,17 +2173,23 @@
           "headers": {
             "Content-Type": "application/json"
           },
-          "data": JSON.stringify({ "user_details": [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": {}, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }] }),
+          "data": JSON.stringify({ "user_details": [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }] }),
         };
-
+        document.getElementById("register-btn").disabled = true;
         $.ajax(settings).done(function (response) {
           document.getElementById("name").value = "";
           document.getElementById("email").value = "";
           document.getElementById("designation").value = "";
           document.getElementById("organisation").value = "";
           document.getElementById("phone_number").value = "";
+          document.getElementById("city").value = "";
           document.getElementById("idChk-normal").checked = false;
+          document.getElementById("register-btn").disabled = false;
           $('#register').modal('hide');
+          // snackbar alert open 
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
         });
       } else {
         [].forEach.call(document.querySelectorAll('.error'), function (el) {

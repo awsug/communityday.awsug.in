@@ -2959,6 +2959,9 @@ i.icon.large {
 .group input:focus {
   outline: none;
 }
+.w-100{
+  width: 100%;
+}
 /* LABEL ======================================= */
 
 .group label {
@@ -3261,10 +3264,15 @@ transition:.2s all;
     text-align: center;
     line-height: 25px;
   }
+  
 }
 @media only screen and (max-width:320px){
   .consent-row {
     margin-top: 35px;
     margin-bottom: 60px;
   }
+}
+
+.w-100::placeholder {
+  color:rgba(137, 137, 137, 0.7);
 }

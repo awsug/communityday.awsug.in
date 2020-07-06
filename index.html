@@ -4,6 +4,7 @@
 <head>
   <title>AWS Community Day India 2020</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
@@ -34,11 +35,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="stylesheets/intlTelInput.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
-
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171268306-1"></script>
@@ -2003,18 +2003,22 @@
               <span class="bar"></span>
               <label><i class="input-sifre-ikon fa fa-building-o"></i><span class="span-input">Organisation <span class="text-danger">*</span></span></label>
             </div>
-            <div class="group">
-              <input type="text" name="phone" id="phone_number" maxlength="13" required>
+            <div class="group w-100">
+              <input id="phone_number" name="phone" class="w-100" type="text" placeholder="xxxxxxxxxx" maxlength="13"
+                required>
+              <!-- <input type="text" name="phone" id="phone_number" maxlength="13" required> -->
               <span class="highlight"></span>
               <span class="bar"></span>
               <span class="error text-danger">
                 Please enter valid mobile number
               </span>
-              <label>
-                <i class="input-sifre-ikon fa fa-phone"></i>
-                <span class="span-input">Phone Number <span class="text-danger">*</span></span>
-              </label>
+              <!-- <label>
+                  <i class="input-sifre-ikon fa fa-phone"></i>
+                  <span class="span-input">Phone Number <span class="text-danger">*</span></span>
+                </label> -->
             </div>
+
+
             <div class="group">
               <input type="text" name="city" id="city" required>
               <span class="highlight"></span>
@@ -2142,8 +2146,35 @@
       return _indexOf != string.length ? _indexOf : 1;
     }
   </script>
-  <!-- getting utm parameter and passing to konfhub end -->
+  <script src="js/intlTelInput.js"></script>
   <script>
+    var input = document.querySelector("#phone_number")
+
+    var iti = window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // hiddenInput: "full_number",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      nationalMode: true,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      placeholderNumberType: "MOBILE",
+      // preferredCountries: ['cn', 'jp'],
+      separateDialCode: true,
+      utilsScript: "js/utils.js",
+    });
+
+
     $('#idChk-normal').change(function () {
       cb = $(this);
       cb.val(cb.prop('checked'));
@@ -2155,10 +2186,12 @@
       var email = document.getElementById("email").value;
       var designation = document.getElementById("designation").value;
       var organisation = document.getElementById("organisation").value;
-      var phone = document.getElementById("phone_number").value;
+
       var city = document.getElementById("city").value;
       var consent = document.getElementById("idChk-normal").value;
 
+
+      var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
       if (!JSON.parse(consent)) {
         [].forEach.call(document.querySelectorAll('.accept-terms'), function (el) {
           el.style.display = 'block';
@@ -2175,6 +2208,7 @@
           },
           "data": JSON.stringify({ "user_details": [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }] }),
         };
+
         document.getElementById("register-btn").disabled = true;
         $.ajax(settings).done(function (response) {
           document.getElementById("name").value = "";
@@ -2199,6 +2233,8 @@
       }
     })
   </script>
+
+
 </body>
 
 </html>

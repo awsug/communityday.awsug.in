@@ -2189,14 +2189,28 @@
 
       var city = document.getElementById("city").value;
       var consent = document.getElementById("idChk-normal").value;
-
-
+      let utm = {};
+      if (location.search) {
+        const urlParams = new URLSearchParams(location.search);
+        for (const [key, value] of urlParams) {
+            utm[key] = value;
+        }
+      } else {
+        utm = undefined
+      }
       var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
       if (!JSON.parse(consent)) {
         [].forEach.call(document.querySelectorAll('.accept-terms'), function (el) {
           el.style.display = 'block';
         });
         return false;
+      }
+      let dataBody = {
+        "user_details":
+          [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }],
+      };
+      if (location.search) {
+        dataBody['utm'] = utm
       }
       if (phone.length <= 13) {
         var settings = {
@@ -2206,7 +2220,7 @@
           "headers": {
             "Content-Type": "application/json"
           },
-          "data": JSON.stringify({ "user_details": [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }] }),
+          "data": JSON.stringify(dataBody),
         };
 
         document.getElementById("register-btn").disabled = true;

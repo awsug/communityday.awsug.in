@@ -2865,6 +2865,24 @@ i.icon.large {
   border: 1px solid #eea236;
   width: 147px;
   height: 40px;
+  color: #fff;
+  line-height: 25px;
+}
+.register-btn-section-right {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.white-btn {
+  background: #fff;
+  color: #eea236;
+  border-radius: 25px;
+  font-weight: 700;
+  border: 1px solid #fff;
+  padding: 0 40px !important;
+  line-height: 45px;
+  height: 45px;
+  margin-left: 5px;
 }
 .btn-outline:hover {
   border: 1px solid #eea236;

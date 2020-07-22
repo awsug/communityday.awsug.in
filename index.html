@@ -101,6 +101,7 @@
                   </p>
                   <div class="btn-register-section">
                     <button class="btn btn-outline" data-toggle="modal" data-target="#register"> Register</button>
+                    <a href="https://sessionize.com/awscommunitydayindia/" target="_blank" class="btn btn-outline"> CFP</a>
                   </div>
                 </div>
               </div>
@@ -129,9 +130,12 @@
                 <p class="enlarge">
 
                 </p>
-                <button class="white icon-grp rt" data-toggle="modal" data-target="#register">
-                  Register
-                </button>
+                <div class="register-btn-section-right">
+                  <button class="white icon-grp_ rt" data-toggle="modal" data-target="#register">
+                    Register
+                  </button>
+                  <a href="https://sessionize.com/awscommunitydayindia/" target="_blank" class="white btn white-btn"> CFP</a>
+                </div>
               </div>
               <!-- <div class="right_in">
                 <p class="awsugblr_logo">
@@ -2198,6 +2202,7 @@
       } else {
         utm = undefined
       }
+      console.log(utm);
       var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
       if (!JSON.parse(consent)) {
         [].forEach.call(document.querySelectorAll('.accept-terms'), function (el) {

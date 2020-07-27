@@ -101,6 +101,7 @@
                   </p>
                   <div class="btn-register-section">
                     <button class="btn btn-outline" data-toggle="modal" data-target="#register"> Register</button>
+                    <a href="https://sessionize.com/awscommunitydayindia/" target="_blank" class="btn btn-outline"> CFP</a>
                   </div>
                 </div>
               </div>
@@ -129,9 +130,12 @@
                 <p class="enlarge">
 
                 </p>
-                <button class="white icon-grp rt" data-toggle="modal" data-target="#register">
-                  Register
-                </button>
+                <div class="register-btn-section-right">
+                  <button class="white icon-grp_ rt" data-toggle="modal" data-target="#register">
+                    Register
+                  </button>
+                  <a href="https://sessionize.com/awscommunitydayindia/" target="_blank" class="white btn white-btn"> CFP</a>
+                </div>
               </div>
               <!-- <div class="right_in">
                 <p class="awsugblr_logo">
@@ -2187,14 +2191,29 @@
 
       var city = document.getElementById("city").value;
       var consent = document.getElementById("idChk-normal").value;
-
-
+      let utm = {};
+      if (location.search) {
+        const urlParams = new URLSearchParams(location.search);
+        for (const [key, value] of urlParams) {
+            utm[key] = value;
+        }
+      } else {
+        utm = undefined
+      }
+      console.log(utm);
       var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
       if (!JSON.parse(consent)) {
         [].forEach.call(document.querySelectorAll('.accept-terms'), function (el) {
           el.style.display = 'block';
         });
         return false;
+      }
+      let dataBody = {
+        "user_details":
+          [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }],
+      };
+      if (location.search) {
+        dataBody['utm'] = utm
       }
       if (phone.length <= 13) {
         var settings = {
@@ -2204,7 +2223,7 @@
           "headers": {
             "Content-Type": "application/json"
           },
-          "data": JSON.stringify({ "user_details": [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }] }),
+          "data": JSON.stringify(dataBody),
         };
 
         document.getElementById("register-btn").disabled = true;

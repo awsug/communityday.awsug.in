@@ -2211,6 +2211,2594 @@
       let dataBody = {
         "user_details":
           [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }],
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AWS Community Day India 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="msapplication-config" content="images/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta property="og:url" content="https://communityday.awsug.in" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AWS Community Day India 2020" />
+  <meta property="og:description" content="AWS Community Day India 2020 is being organized by AWS User Group India. We're united by community-led learnings and diversified by the wide variety of tools and technologies closely knit with Amazon Web Services." />
+  <meta property="og:image" content="https://communityday.awsug.in/images/aws-india-group.png" />
+  <meta property="og:image:secure_url" content="https://communityday.awsug.in/images/aws-india-group.png" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@awsug">
+  <meta name="twitter:creator" content="@awsugindia">
+  <meta name="twitter:title" content="AWS Users Group India">
+  <meta name="twitter:description" content="AWS User Group India is volunteer driven, group of passionate Amazon Web Services (aka AWS) {Developers, Architects, Users, Evangelists} who meet to {share best practices, discuss up coming features, pit falls, etc} in India.">
+  <meta name="twitter:image" content="https://communityday.awsug.in/images/aws-india-group.png">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/site.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheets/intlTelInput.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171268306-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-171268306-1');
+  </script>
+  <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5b63095a78eb8b00113e362f&product=inline-share-buttons"></script>
+  <link rel="manifest" href="/manifest.json" />
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "b3f01cfa-1a70-4f46-9dd1-202a1ae14385",
+      });
+    });
+  </script>
+  <!-- Facebook Pixel Code 
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1112628635595414');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1112628635595414&ev=PageView&noscript=1" /></noscript>
+  End Facebook Pixel Code -->
+</head>
+
+<body>
+  <div id="page">
+    <div class="section section-1 hdr" id="home">
+      <div class="content">
+        <div class="container">
+          <div>
+            <div wid="50%" class="left">
+              <div class="left_in">
+                <img src="images/acd-india-logo.png" />
+                <div class="txt">
+                  <h4 class="headin-ttl">
+                    16th & 17th Oct 2020
+                  </h4>
+                  <p>
+                    AWS User Groups in India are back with a bang to
+                    host the most awaited event, AWS Community Day India
+                    2020, unveiling success stories, use cases & much more
+                    from industry leaders.
+                  </p>
+                  <div class="btn-register-section">
+                    <button class="btn btn-outline" data-toggle="modal" data-target="#register"> Register</button>
+                    <a href="https://sessionize.com/awscommunitydayindia/" target="_blank" class="btn btn-outline"> CFP</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div wid="50%" class="right">
+              <div class="gal flex-it col">
+                <div class="top f1 flex-it">
+                  <div class="f2 ims im1"></div>
+                  <div class="f1 ims im2"></div>
+                </div>
+                <div class="bot f1 flex-it">
+                  <div class="f1 ims im3"></div>
+                  <div class="f2 flex-it col">
+                    <div class="f1 flex-it">
+                      <div class="f1 ims im4"></div>
+                      <div class="f1 ims im5"></div>
+                    </div>
+                    <div class="f1 ims im6"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="right_in">
+                <p class="awsugblr_logo">
+                  <img src="images/ug-logo-for-profile-pic-dark.png" class="img-responsive w-50" />
+                </p>
+                <p class="enlarge">
+
+                </p>
+                <div class="register-btn-section-right">
+                  <button class="white icon-grp_ rt" data-toggle="modal" data-target="#register">
+                    Register
+                  </button>
+                  <a href="https://sessionize.com/awscommunitydayindia/" target="_blank" class="white btn white-btn">
+                    CFP</a>
+                </div>
+              </div>
+              <!-- <div class="right_in">
+                <p class="awsugblr_logo">
+                  <img src="./images/awsugblr_logo.png" />
+                </p>
+                <p class="enlarge">
+                  Thanks <img src="images/heart.svg" alt="Thanks heart" class="w-32px"> everyone for making last
+                  Community Day
+                  <img src="images/balloon.svg" alt="Celebrate" class="w-32px"> a huge
+                  success
+                </p>
+                <button class="white icon-grp rt" id="link">
+                  EXPLORE 2018
+                  <i class="icon large ion-md-play-circle"></i>
+                </button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="nav-bar">
+        <p id="toggle"><span></span></p>
+        <!-- <li class="spec">
+          <a class="buy-ticket-link disabled button" >Sold Out</a>
+        </li> -->
+        <ul>
+          <li>
+            <a href="#com_info">About Community Day</a>
+          </li>
+          <!-- <li>
+            <a href="#cfp">CFP</a>
+          </li> -->
+          <!-- <li>
+            <a href="#venues">Venues</a>
+          </li> -->
+          <li>
+            <a href="#agenda">Agenda</a>
+          </li>
+          <li>
+            <a href="#workshop">Workshops</a>
+          </li>
+          <!-- <li>
+            <a href="#sponsors">Sponsors</a>
+          </li> -->
+          <li>
+            <a href="#speakers">Speakers</a>
+          </li>
+          <li>
+            <a href="#volunteers">Volunteers</a>
+          </li>
+          <li>
+            <a href="code-of-conduct.html">Code Of Conduct</a>
+          </li>
+          <!-- <li>
+            <a href="https://communityday.awsug.in/2018" target="_blank">Community Day 2018</a>
+          </li> -->
+          <li>
+            <a href="#subscribe" id="sub-button" class="sub-button">
+              <i class="icon large ion-md-notifications-outline"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section section-2">
+      <div class="container flex-it">
+        <div class="f1 left" id="com_info">
+          <div class="left_in">
+            <h4 class="headin-ttl">
+              WHO ARE WE?
+            </h4>
+            <p>
+              <b>AWS User Group India</b>
+              is united by community-led learnings and
+              diversified by the wide variety of tools and technologies
+              closely knit with Amazon Web Services, cloud computing
+              technology, AWS design implementation and servicing, high
+              scalability / performance computing, production use cases of
+              AWS, blockchain, Artificial Intelligence and much more.
+            </p>
+            <p>
+              AWS Community Days are community-organized cloud education events, featuring technical discussions
+              and demos led by expert AWS users and industry leaders from around the world
+            </p>
+            <p>
+              Community-based learning is the best way to enhance the concepts
+              being taught by connecting with enthusiasts in person, thereby
+              sharing first-hand experiences and familiar, accessible
+              examples.
+            </p>
+            <p>
+              All skill levels are welcome to help accomplish our motto of
+              learning, sharing and networking. Let's join hands to empower
+              this tech community to make it bigger and better!
+            </p>
+            <p>
+              <center>
+                <!-- <a href="https://meetup.com/awsugblr/" target="_blank">
+                  <i class="fa fa-meetup" aria-hidden="true" style="font-size:250%;"></i> </a>&nbsp; -->
+                <a href="https://twitter.com/awsugindia" target="_blank">
+                  <i class="fa fa-twitter" aria-hidden="true" style="color:orange;font-size:250%"></i> </a>&nbsp;
+                <a href="https://www.facebook.com/awsugindia" target="_blank">
+                  <i class="fa fa-facebook" aria-hidden="true" style="font-size:250%;"></i> </a>&nbsp;
+                <a href="https://m.youtube.com/c/AWSUserGroupIndia" target="_blank">
+                  <i class="fa fa-youtube" aria-hidden="true" style="color:orange;font-size:250%"></i> </a>&nbsp;
+                <a href="https://www.linkedin.com/company/awsugindia/" target="_blank">
+                  <i class="fa fa-linkedin" aria-hidden="true" style="font-size:250%"></i> </a>&nbsp;
+                <!-- <a href="https://go.awsug.in/slack" target="_blank">
+                  <i class="fa fa-slack" aria-hidden="true" style="color:orange;font-size:250%"></i>
+                </a> -->
+              </center>
+            </p>
+          </div>
+        </div>
+        <div class="f1 right" id="even_info">
+          <div class="right_in">
+            <h4 class="heading-ttl">
+              What to expect from AWS Community Day?
+            </h4>
+            <ul class="circle">
+              <li>
+                Renew, revive & revitalize to exemplify your excitement about
+                the work you do
+              </li>
+              <li>
+                Learn industry trends and intricacies about innovative
+                implementations from AWS experts
+              </li>
+              <li>
+                Harness the power of networking with AWS users, DevOps,
+                developers & solutions architects
+              </li>
+              <li>
+                Network with fellow AWS veterans & techies during breaks
+              </li>
+              <li>
+                Novice to pioneer on relentless pursuit to learn can rejoice
+                the AWS offerings & success stories under one roof.
+              </li>
+              <li>Take helpful and valuable information back to business</li>
+              <li>
+                Gain visibility to get more publicity for your esteemed
+                organisation
+              </li>
+              <li>
+                Sporting chance for active participants to win AWS goodies
+              </li>
+            </ul>
+          </div>
+          <br /><b>Please read the
+            <a href="./code-of-conduct.html" target="_blank">Code of Conduct</a>
+            for this event</b>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="section section-tickets text-center" id="ticktes">
+      <div class="container">
+        <h4 class="main-heading-ttl text-center">Register</h4>
+        <div class="row flex-it">
+          <div class="col-md-3">
+            <div class="card tick_conf with_icon border sold">
+              <h4 class="heading-ttl">Conference</h4>
+              <div class="bg_img"></div>
+              <p>Gives you access to the conference on 27th July, 2019</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card tick_work_1 with_icon border dark sold">
+              <h4 class="heading-ttl">Serverless Workshop</h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Serverless Workshop on 26th July, 2019</p>
+
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="card tick_work_2 with_icon border sold">
+              <h4 class="heading-ttl">Deep learning workshop</h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Deep learning workshop on 26th July, 2019</p>
+
+
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="card combo with_icon border dark sold">
+              <h4 class="heading-ttl">Combo</h4>
+              <div class="bg_img"></div>
+              <p>Gives you access to conference and any one workshop</p>
+            </div>
+          </div>
+        </div>
+        <div class="buy-wrapper row flex-it">
+          <div class="f1">
+            <a class="button large buy-ticket-link disabled">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Modals-->
+    
+
+    <!--     1      -->
+
+
+    <!-- <div id="workshop_" class="modal fade fillo" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="heading-ttl">
+              <p>Serverless on AWS</p>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p>Hands-on Workshop on Developing AWSome App - a Serverless Food-delivery Application</p>
+            <p class="heading-ttl small-head">Abstract:</p>
+            <p>Get hands-on experience with AWS and serverless applications in this workshop conducted by experts from
+              AWS. </p>
+            <p>In this workshop you'll deploy a simple web application that enables users to request food from the
+              AWSome Food
+              website using services like <strong>AWS Lambda, Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS Step
+                Functions and
+                Amazon Cognito. </strong></p>
+            <p>
+              With the knowledge from the workshop, you can build and deploy your own serverless applications using
+              these services
+              for common use cases like web applications, analytics, and more.
+            </p>
+            <p class="heading-ttl small-head">Format:</p>
+            <p>
+              Full-day hands-on workshop (yes, do bring your laptops). The timings are as below:
+              <p>09.30am - 10.00am: Registration cum installation & setup </p>
+              <p>10.00am - 11.30pm: Session </p>
+              <p>11.30am - 11.45am: Tea break </p>
+              <p>11.45am - 01.00pm: Session</p>
+              <p>01.00pm - 02.00pm: Lunch</p>
+              <p>02.00pm - 03.30pm: Session</p>
+              <p>03.30pm - 03.45pm: Tea break</p>
+              <p> 03.45pm - 05.45pm: Session </p>
+              <p>05.45pm - 06.00pm: Wrap-up / closure </p>
+            </p>
+
+            <p class="heading-ttl small-head">Application – Technical Description:</p>
+            <p>
+              The application will present users with an HTML & JS based user interface for ordering food items and
+              indicating the
+              location where they would like the food to be delivered. The interface on the backend with a RESTful web
+              service will
+              submit the request and find and dispatch food to the requester’s location. The application will also
+              provide
+              facilities for users to register with the service and log in before ordering food.</p>
+            <p>
+              The application architecture uses S3 hosts static web resources including HTML, CSS, JavaScript, and
+              image
+              files which
+              are loaded in the user's browser. JavaScript executed in the browser sends and receives data from a
+              backend API built
+              using Lambda & Step Functions and API Gateway. Amazon Cognito provides user management and authentication
+              functions to
+              secure the backend API. Finally, DynamoDB provides a persistence layer where data can be stored by the
+              API's Lambda
+              function.</p>
+
+            <p class="heading-ttl small-head">Pre-requisites:</p>
+            <ul>
+              <li><strong>AWS Account:</strong> In order to complete this workshop you'll need an AWS Account with
+                access to create
+                AWS IAM, S3, DynamoDB,
+                Lambda, Step Functions, API Gateway and Cognito resources. All of the resources you will launch as part
+                of this
+                workshop
+                are eligible for the AWS free tier if your account is less than 12 months old. See the <a href="https://aws.amazon.com/free/"
+                  target="_blank">AWS Free Tier page</a> for more
+                details.</li>
+              <li><strong>Essential JavaScript, HTML/CSS & Python knowledge:</strong> The front-end used JS and
+                HTML/CSS
+                and the
+                backend code is written in
+                Python; hence working knowledge is needed on these languages for this workshop.</li>
+            </ul>
+
+            <div class="wid">
+              <p class="text-center heading-ttl small-head">Agenda:</p>
+              <div class="block">
+                <p><strong>Session 1: Getting Started with Serverless Development</strong></p>
+                <ul>
+                  <li>
+                    Essentials of serverless development
+                  </li>
+                  <li>
+                    Introduction to the essential AWS services used in this workshop and how they relate to each other:
+                    AWS Lambda,
+                    Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS Step Functions and Amazon Cognito.
+                  </li>
+                  <li>
+                    Hands-on: Clone the GitHub repo for the “AWSome Food” application
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <p><strong>Session 2: Static Website Hosting</strong></p>
+                <ul>
+                  <li>
+                    How to use S3 for static website hosting
+                  </li>
+                  <li>
+                    Hands-on: Create an S3 bucket, upload content, add a bucket policy to allow public reads, and
+                    enable
+                    website
+                    hosting; validate the hosted website
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <p><strong>Session 3: User Management</strong></p>
+                <ul>
+                  <li>
+
+                    How to perform user authentication and registration with Amazon Cognito User Pools
+                  </li>
+                  <li>
+                    Hands-on: Create an Amazon Cognito user pool, add an application client, updating the Config.js
+                    file
+                    in your
+                    website
+                    bucket, and validate the implementation.
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <p class="text-center"><strong>Lunch break </strong></p>
+              </div>
+              <div class="block">
+                <p><strong>Session 4: Serverless Service Backend </strong></p>
+                <ul>
+                  <li>
+                    How to use AWS Lambda, Step Functions, and Amazon DynamoDB to build a backend process for handling
+                    requests from
+                    your
+                    web application.
+                  </li>
+                  <li>
+                    Hands-on: Create DynamoDB table, create an IAM role for the lambda and step functions, create
+                    lambdas for
+                    handing
+                    requests; validate implementation
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <p><strong>Session 5: RESTful APIs with AWS Lambda and Amazon API Gateway</strong></p>
+
+                <ul>
+                  <li>How to use API Gateway to expose the created lambda and step functions as a RESTful API.
+                  </li>
+                  <li>Hands-on: Create a new REST API, create a Cognito User Pools Authorizer, create a new resource
+                    and
+                    method,
+                    deploy your
+                    API, update the website config; validate the implementation.</li>
+                </ul>
+              </div>
+              <div class="block">
+                <p><strong>Session 6: Putting things together and next steps</strong></p>
+                <ul>
+                  <li>How to test the implementation & perform load testing</li>
+                  <li>How to monitor the application, logging, debugging, etc</li>
+                  <li>Wrap-up and key takeaways</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <br>
+            <div class="row">
+              <div class="col-md-1">
+
+              </div>
+              <div class="col-md-2">
+                <img class="speakerImg" src="images\madhu.jpg" alt="speaker img">
+
+              </div>
+
+              <div class="col-md-3">
+                <div id="align">
+                  <h4 style="color:#ff9900">Workshop Trainer</h4>
+                  <h4><a href="https://www.linkedin.com/in/madhusudanshekar/" target="_blank">Madhusudhan Shekar</a></h4>
+                  <p><a href="https://aws.amazon.com/" target="_blank">AWS</a></p>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <img class="speakerImg" src="images/srushith.jpg" alt="speaker img">
+              </div>
+              <div class="col-md-3">
+                <div id="align1">
+                  <h4 style="color:#ff9900">Supporting Trainer <br /><small>(Hands-on labs)</small></h4>
+                  <h4><a href="https://www.linkedin.com/in/srushith/" target="_blank">Srushith R</a></h4>
+                  <p style="margin-top:-1px;"> <a href="https://konfhub.com/" target="_blank">KonfHub</a></p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <hr>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  -->
+
+    <!--     2      -->
+
+
+
+    <!-- <div id="workshop_" class="modal fade fillo" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="heading-ttl">
+              <p>Deep Learning on AWS</p>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p>Learn about cloud-based Deep Learning solutions on AWS</p>
+            <p class="heading-ttl small-head">Description</p>
+            <p>
+              In this one-day course, you will learn cloud-based deep learning (DL)
+              solutions on the AWS platform. You will learn how to run your models on the
+              cloud using Amazon EC2‒based deep learning Amazon Machine Image (AMI) and
+              Apache MXNet on AWS frameworks. In addition, you will learn how to use
+              Amazon SageMaker and deploy your deep learning models using AWS services
+              like AWS Lambda and Amazon Elastic Container Service (Amazon ECS)—all while
+              designing intelligent systems on AWS.
+            </p>
+            <p class="heading-ttl small-head">Format:</p>
+            <p>
+              Mix of class-room training and hands-on workshop (yes, do bring your laptops). The timings are as below:
+              <p>09.30am - 10.00am: Registration cum installation & setup </p>
+              <p>10.00am - 11.30pm: Session </p>
+              <p>11.30am - 11.45am: Tea break </p>
+              <p>11.45am - 01.00pm: Session</p>
+              <p>01.00pm - 02.00pm: Lunch</p>
+              <p>02.00pm - 03.30pm: Session</p>
+              <p>03.30pm - 03.45pm: Tea break</p>
+              <p>03.45pm - 05.45pm: Session </p>
+              <p>05.45pm - 06.00pm: Wrap-up / closure</p>
+            </p>
+
+            <p class="heading-ttl small-head">Intended Audience</p>
+            <div class="block">
+              <p>
+                <strong>This course is intended for:</strong>
+              </p>
+              <ul>
+                <li>
+                  Developers who are responsible for developing deep learning
+                  applications
+                </li>
+                <li>
+                  Developers who want to understand concepts behind deep learning and
+                  how to implement a deep learning solution on AWS
+                </li>
+              </ul>
+            </div>
+            <p class="heading-ttl small-head">Course Objectives</p>
+            <div class="block">
+              <p><strong>In this course, you will learn how to: </strong></p>
+              <ul>
+                <li>
+                  Define machine learning (ML) and deep learning
+                </li>
+                <li>
+                  Identify the concepts in a deep learning ecosystem
+                </li>
+                <li>
+                  Leverage Amazon SageMaker and MXNet programming frameworks for deep
+                  learning workloads
+                </li>
+                <li>Fit AWS solutions for deep learning deployments</li>
+              </ul>
+            </div>
+            <p class="heading-ttl small-head">Prerequisites</p>
+            <div class="block">
+              <p>
+                <strong>We recommend that attendees of this course have the following
+                  prerequisites:</strong>
+              </p>
+              <ul>
+                <li>
+                  Basic understanding of machine learning processes
+                </li>
+                <li>
+                  Basic understanding of AWS core services like Amazon EC2 and knowledge
+                  of AWS SDKs
+                </li>
+                <li>
+                  Basic knowledge of a scripting language, such as Python
+                </li>
+              </ul>
+            </div>
+
+
+            <p class="heading-ttl small-head">Hands-on Activity</p>
+            <div class="block">
+              <p>
+                <strong>This course allows you to test new skills and apply knowledge to your
+                  working environment through a variety of practical exercises.
+                </strong>
+              </p>
+            </div>
+          </div>
+          <div>
+            <img src=""></img>
+          </div>
+
+          <div class="modal-footer">
+
+            <br>
+            <div class="row">
+              <div class="col-md-1">
+
+              </div>
+
+              <div class="col-md-2">
+                <img class="speakerImg" src="images\hemanth.jpg" alt="speaker img">
+
+              </div>
+
+              <div class="col-md-3">
+                <div id="align">
+                  <h4 style="color:#ff9900">Technical Trainer</h4>
+                  <h4><a href="https://www.linkedin.com/in/hemant-gahankari-57a1909/" target="_blank">Hemanth Gahankari</a></h4>
+                  <p><a href="https://aws.amazon.com/aispl/" target="_blank">AISPL</a></p>
+                </div>
+
+              </div>
+
+
+              <div class="col-md-2">
+                <img class="speakerImg" src="images/Shinduri.png" alt="speaker img">
+              </div>
+
+
+
+
+              <div class="col-md-3">
+                <div id="align1">
+                  <h4 style="color:#ff9900">Technical Trainer</h4>
+                  <h4><a href="https://www.linkedin.com/in/shinduri-ks-5142a7156/" target="_blank">Shinduri KS</a></h4>
+                  <p><a href="https://aws.amazon.com/aispl/" target="_blank">AISPL</a></p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <hr>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  -->
+
+    <!--     3     -->
+
+
+
+   <!-- <div id="workshop_3" class="modal fade fillo" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="heading-ttl">  
+              <p>Serverless Bot for Web Chat, SMS and Phone Calls</p>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p class="heading-ttl small-head">Description</p>
+            <p>
+              Get hands-on experience in building a Serverless application using AWS Services. In this session, we will create a Centralized Bot using AWS Lex that can be initiated via SMS (Amazon Pinpoint), Web (AWS S3), or Phone Calls (Amazon Connect).
+            </p>
+            <p class="text-danger">
+              Note: We will be using the AWS US region for the session.
+            </p>
+            <p class="heading-ttl small-head">AWS Serverless Services:</p>
+            <ul class="modal-ul">
+              <li>Lex</li>
+              <li>Pinpoint</li>
+              <li>SNS</li>
+              <li>S3</li>
+              <li>DynamoDB</li>              
+              <li>Amazon Connect</li>                    
+              <li>Serverless Framework</li>              
+            </ul>
+            <p class="heading-ttl small-head">Workshop Content:</p>
+            <ul class="modal-ul">
+              <li>Setup Lex Bot, Build, and Test</li>
+              <li>Integrate Bot with Website hosted on S3 and test from Browser</li>
+              <li>Integrate Bot with Pinpoint SMS and test from User Phone</li>
+              <li>Integrate Bot with Amazon Connect and test using a Phone Call</li>
+            </ul>
+            <p class="heading-ttl small-head">Pre-requisites:</p>
+            <ul class="modal-ul">
+              <li>Active Internet Connection</li>
+              <li>Active AWS Account</li>
+              <li>Basic understanding of AWS Services like IAM, S3, Lambda, and DynamoDB</li>
+              <li>There will be a minimum charge as we will need to acquire SMS Long-code.</li>              
+            </ul>
+            <p class="heading-ttl small-head">Pricing:</p>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="table-head">
+                  <tr>
+                    <th>Service</th>
+                    <th>Billing</th>
+                    <th>Usage Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Lex </td>
+                    <td>No Cost</td>
+                    <td>No Cost</td>
+                  </tr>
+                  <tr>
+                      <td>S3</td>
+                      <td>No Cost</td>
+                      <td>No Cost</td>
+                    </tr>
+                  <tr>
+                    <td>Pinpoint for SMS</td>
+                    <td>Acquire Phone Number for Inbound SMS</td>
+                    <td>Cost of sending US SMS</td>
+                  </tr>
+                  <tr>
+                    <td>Amazon Connect for Call Center</td>
+                    <td>Direct Inward Number</td>
+                    <td></td>
+                  </tr>                  
+                </tbody>
+              </table>
+            </div>
+
+            <div class="block">
+              <p>
+                <strong class="text-danger">
+                  Note: Amazon Connect is not available for AISPL accounts, so we can not use it from the Indian
+                  AWS account, but we will show the full integration and demo during the workshop.
+                </strong>
+              </p>
+            </div>
+          </div>
+          <div>
+            <img src=""></img>
+          </div>
+
+          <div class="modal-footer">
+
+            <br>
+            <div class="row">
+              <div class="col-md-1">
+
+              </div>
+
+              <div class="col-md-2">
+                <img class="speakerImg" src="images/vols/Dhaval.png" alt="speaker img">
+
+              </div>
+
+              <div class="col-md-3">
+                <div id="align">
+                  <h4 style="color:#ff9900">AWS Serverless Hero</h4>
+                  <h4><a href="https://www.linkedin.com/in/hemant-gahankari-57a1909/" target="_blank">Dhaval Nagar</a></h4>
+                 <p><a href="https://appgambit.com" target="_blank">AppGambit</a></p>
+                </div>
+
+              </div>
+
+
+              <div class="col-md-2">
+                <img class="speakerImg" src="images/vols/Bhuvaneswari.png" alt="speaker img">
+              </div>
+              <div class="col-md-3">
+                <div id="align1">
+                  <h4 style="color:#ff9900">AWS Community Hero</h4>
+                  <h4><a href="https://www.linkedin.com/in/shinduri-ks-5142a7156/" target="_blank">Bhuvaneswari
+                      Subramani</a></h4>
+                  <p><a href="https://www.infor.com/" target="_blank">Infor</a></p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <hr>
+            <div class="foot-btn d-flex justify-content-center">
+              <button type="button">Register</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  -- >
+
+
+    <!--     1      -->
+
+
+
+      <div id="workshop_1" class="modal fade fillo" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="heading-ttl">
+                <p>Serverless Bot for Web Chat, SMS and Phone Calls</p>
+              </h4>
+            </div>
+            <div class="modal-body">
+              <p class="heading-ttl small-head">Description</p>
+              <p>
+                Get hands-on experience in building a Serverless application using AWS Services. In this session, we will create a Centralized Bot using AWS Lex that can be initiated via SMS (Amazon Pinpoint), Web (AWS S3), or Phone Calls (Amazon Connect).
+              </p>
+              <p class="text-danger">
+                Note: We will be using the AWS US region for the session.
+              </p>
+              <p class="heading-ttl small-head">AWS Serverless Services:</p>
+              <ul class="modal-ul">
+                <li>Lex</li>
+                <li>Pinpoint</li>
+                <li>SNS</li>
+                <li>S3</li>
+                <li>DynamoDB</li>              
+                <li>Amazon Connect</li>                    
+                <li>Serverless Framework</li>              
+              </ul>
+              <p class="heading-ttl small-head">Workshop Content:</p>
+              <ul class="modal-ul">
+                <li>Setup Lex Bot, Build, and Test</li>
+                <li>Integrate Bot with Website hosted on S3 and test from Browser</li>
+                <li>Integrate Bot with Pinpoint SMS and test from User Phone</li>
+                <li>Integrate Bot with Amazon Connect and test using a Phone Call</li>
+              </ul>
+              <p class="heading-ttl small-head">Pre-requisites:</p>
+              <ul class="modal-ul">
+                <li>Active Internet Connection</li>
+                <li>Active AWS Account</li>
+                <li>Basic understanding of AWS Services like IAM, S3, Lambda, and DynamoDB</li>
+                <li>There will be a minimum charge as we will need to acquire SMS Long-code.</li>              
+              </ul>
+              <p class="heading-ttl small-head">Pricing:</p>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead class="table-head">
+                    <tr>
+                      <th>Service</th>
+                      <th>Billing</th>
+                      <th>Usage Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lex </td>
+                      <td>No Cost</td>
+                      <td>No Cost</td>
+                    </tr>
+                    <tr>
+                        <td>S3</td>
+                        <td>No Cost</td>
+                        <td>No Cost</td>
+                      </tr>
+                    <tr>
+                      <td>Pinpoint for SMS</td>
+                      <td>Acquire Phone Number for Inbound SMS</td>
+                      <td>Cost of sending US SMS</td>
+                    </tr>
+                    <tr>
+                      <td>Amazon Connect for Call Center</td>
+                      <td>Direct Inward Number</td>
+                      <td></td>
+                    </tr>                  
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="block">
+                <p>
+                  <strong class="text-danger">
+                    Note: Amazon Connect is not available for AISPL accounts, so we can not use it from the Indian
+                    AWS account, but we will show the full integration and demo during the workshop.
+                  </strong>
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src=""></img>
+            </div>
+
+            <div class="modal-footer">
+
+              <br>
+              <div class="row">
+                <div class="col-md-1">
+
+                </div>
+
+                <div class="col-md-2">
+                  <img class="speakerImg" src="images/vols/Dhaval.png" alt="speaker img">
+
+                </div>
+
+                <div class="col-md-3">
+                  <div id="align">
+                    <h4 style="color:#ff9900">AWS Serverless Hero</h4>
+                    <h4><a href="https://www.linkedin.com/in/hemant-gahankari-57a1909/" target="_blank">Dhaval Nagar</a></h4>
+                  <p><a href="https://appgambit.com" target="_blank">AppGambit</a></p>
+                  </div>
+
+                </div>
+
+
+                <div class="col-md-2">
+                  <img class="speakerImg" src="images/vols/Bhuvaneswari.png" alt="speaker img">
+                </div>
+                <div class="col-md-3">
+                  <div id="align1">
+                    <h4 style="color:#ff9900">AWS Community Hero</h4>
+                    <h4><a href="https://www.linkedin.com/in/shinduri-ks-5142a7156/" target="_blank">Bhuvaneswari
+                        Subramani</a></h4>
+                    <p><a href="https://www.infor.com/" target="_blank">Infor</a></p>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <hr>
+              <div class="foot-btn d-flex justify-content-center">
+                <button type="button">Register</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!--     2      -->
+
+
+    <div id="workshop_2" class="modal fade fillo" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="heading-ttl">
+              <p>Alexa Workshop</p>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p class="heading-ttl small-head">Description</p>
+            <p>
+                <b> Speaker </b>: Karthik Ragubathy, Solutions Architect with the Alexa team <br>
+                <b> Topic </b>: Building an Engaging Voice Game on Alexa <br>
+                <b> Agenda </b>: In this workshop, Karthik Ragubathy, Solutions Architect with the Alexa team will walk us through the dynamics of building an engaging voice-first game on Alexa.
+            </p>
+
+            <p class="heading-ttl small-head">Workshop Content:</p>
+            <ul class="modal-ul">
+          <p>In this 4 hour long workshop, you will learn </p>
+
+              <li>How to come up with an engaging voice-first game idea for Alexa</li>
+              <li>Applying concepts of situational design to build storyboards</li>
+              <li>Leveraging the power of databases and gamification through Leaderboards</li>
+              <li>Designing Multimodal experiences on Screen-enabled Alexa Devices like FireTV, Echo Show 5</li>
+            </ul>
+            <p class="heading-ttl small-head">Session Pre-Requisites :</p>
+            <ul class="modal-ul">
+              <li>Knowledge of NodeJS / Any other programming language. We will use NodeJS for this workshop, but you will have Python code-samples as well to follow along.</li>
+              <li>Knowledge of Basic Alexa terminology (Slots, Intents etc) : Learn this by Building your first Alexa Skill – <a href="https://alexa.design/cakewalk" target="_blank">https://alexa.design/cakewalk</a></p></li>      
+            </ul>
+            <p class="heading-ttl small-head">Technical Resources :</p>
+            <ul class="modal-ul">
+              <li>Alexa Developer Console</li>
+              <li>AWS Services : AWS Lambda, S3, DynamoDB, Cloudwatch and Cloudformation</li>      
+            </ul>
+          </div>
+
+          <div>
+            <img src=""></img>
+          </div>
+
+          <div class="modal-footer">
+
+            <br>
+            <div class="row">
+              <div class="col-md-1">
+
+              </div>
+
+              <div class="col-md-2">
+                <img class="speakerImg" src="images\speakers\karthik.jpg" alt="speaker img">
+
+              </div>
+
+              <div class="col-md-3">
+                <div id="align">
+                  <h4 style="color:#ff9900">Solutions Architect with the Alexa team</h4>
+                  <h4><a href="https://www.linkedin.com/in/hemant-gahankari-57a1909/" target="_blank">Karthik Ragubathy</a></h4>
+                </div>
+              </div>
+              
+            </div>
+            <br>
+            <hr>
+            <div class="foot-btn d-flex justify-content-center">
+              <button type="button">Register</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <!-- <div class="section section-talk text-center hide" id="cfp">
+      <div class="container">
+        <img src="images/bgda.svg">
+        <div class="cfp">
+          <h4 class="main-heading-ttl">Submit a talk</h4>
+          <h4>Thank you for the overwhelming response. CFPs are now closed.</h4>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="section section-3 inv" id="venues">
+      <div class="container flex-it">
+        <div class="left f1 flex-it">
+          <h4 class="headin-ttl">
+            Venues
+          </h4>
+          <div class="left_in f1">
+            <div id="map"></div>
+          </div>
+        </div>
+        <div class="right f1">
+          <div class="right_in">
+            <div class="ven-1 ven active" data-lat="12.9767814" data-lng="77.6197088" data-label="Conrad India">
+              <div class="rand_cls">
+                <span class="date_ori">27th July 2019</span>
+                <h4 class="headin-ttl">Conference</h4>
+              </div>
+              <ul>
+                <li><b>Conrad India,</b></li>
+                <li>25/3, Kensington Rd, Someshwarpura,</li>
+                <li>Ulsoor, India,</li>
+                <li>Karnataka 560008</li>
+              </ul>
+            </div>
+            <div class="ven-2 ven" data-lat="12.9502273" data-lng="77.6967477" data-label="Radisson Blu">
+              <div class="rand_cls">
+                <span class="date_ori">26th July 2019</span>
+                <h4 class="headin-ttl">Workshop</h4>
+              </div>
+              <ul>
+                <li><b>Radisson Blu India Outer Ring Road,</b></li>
+                <li>90-4, Sarjapur Outer Ring Rd,</li>
+                <li>Marathahalli, India,</li>
+                <li>Karnataka 560037</li>
+              </ul>
+            </div>
+            <div class="marked"></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="section section-4 inv" id="agenda">
+      <div class="container">
+        <div class="sponsors">
+          <h4 class="main-heading-ttl text-center white-text">Call for Papers <br /> <a href="https://sessionize.com/awscommunitydayindia/"
+              class="btn btn-warning btn-md" target="_blank">Submit Your Talk</a></h4>
+          <div class="text-center agenda">
+            <div class="table">
+              <div class="thead">
+                <div class="tr">
+                  <div class="th idx">
+                    <div>
+                      <p>Date</p>
+                    </div>
+                  </div>
+                  <div class="th full-width">
+                    <div>
+                      <p>Details</p>
+                    </div>
+                  </div>
+                  <!-- <div class="th">
+                    <div>
+                      <p>&nbsp;</p>
+                    </div>
+                  </div>
+                  <div class="th">
+                    <div>
+                      <p>&nbsp;</p>
+                    </div>
+                  </div>
+                  <div class="th">
+                    <div>
+                      <p>&nbsp;</p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="tbody">
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>1st July</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p class="text-black"><a href="https://sessionize.com/awscommunitydayindia/" target="_blank"> CFP
+                          Open <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>15th August</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>CFP Close</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr ">
+                  <div class="td idx">
+                    <div>
+                      <p>1st September</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Final list of speakers will be published on the website </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>16th October</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p> AWS Community Day - India</p>
+                      <!-- <p><a href="https://www.linkedin.com/in/prasannaraghavendra/" target="_blank">Prasanna Raghavendra, R&D Director, JFrog India</a></p>
+                      <p><a href="https://www.linkedin.com/in/seshu-reddy-01a5715/" target="_blank">Seshu Reddy, SRE, JFrog India</a></p> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>10:00 AM - 10:30 AM</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p> Building Voice Enabled Experiences with Alexa <a href="https://www.linkedin.com/in/pkarthikr/" target="_blank"> Karthik Ragubathy, Solutions Architect, Alexa Skills Kit </a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>10:30 AM - 11:00 AM</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>How Freshworks reduced blast radius and improved uptime at 500k requests per minute <a href="https://www.linkedin.com/in/kirandarisi/" target="_blank"> Kiran Darisi, Co-Founder and Distinguished Engineer at Freshworks </a> </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tr gap">
+                  <div class="td idx">
+                    <div>
+                      <p>11:00 AM - 11:30 AM</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p> Tea Break</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>11:30 AM - 11:50 AM</p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Serverless Architecture : The future of Cloud Computing</p>
+                      <p> <a href="https://www.linkedin.com/in/palanisamy/" target="_blank"> Palanisamy Chellappan,Enterprise Architect, Brillio </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Building a search experience live with App Search</p>
+                      <p><a href="https://www.linkedin.com/in/aravindputrevu" target="_blank"> Aravind Putrevu, Developer Advocate, Elastic </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        From One to Many: Slack's transition away from a single AWS account  ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/slacks-transition-away-from-a-single-aws-account" target="_blank">SLIDES</a>***
+                      </p>
+                      <p>Andrew Martin, Senior Cloud Engineer, Slack</p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Diversity Program: Practical tactics for achieving full potential in your career ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/practical-tactics-for-achieving-full-potential-in-your-career-188547063" target="_blank">SLIDES</a>***</p>
+                      <p><a href="https://www.linkedin.com/in/diana-cruz-solash-4452336/" target="_blank">Diana Cruz Solash, VP Inclusion and Diversity, Infor</a></p>
+                      <p> Moderated by <a href="https://www.linkedin.com/in/bhuvanas" target="_blank"> Bhuvaneswari Subramani, AWS re:Invent Diversity Scholarship Recipient </a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>12:00 PM - 12:20 PM</p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Building voice-driven apps for Alexa.</p>
+                      <p><a href="https://www.linkedin.com/in/saifurrahmanmohsin" target="_blank"> Saifur Rahman Mohsin, Developer, Web, Mobile and Voice Driven Apps </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        What's New - "An AWS server-less backed platform for latest news on
+                        product releases."
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/krishna-chaitanya-sadhu-38487532/" target="_blank"> Krishna Chaitanya Sadhu, Architect, Infor India Pvt Ltd. </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Lot of learns from on-prem migration to AWS</p>
+                      <p><a href="https://www.linkedin.com/in/gangireddy-danamreddy-465675148" target="_blank"> Gangireddy D, SRE, Knolskape </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Diversity Program: Exploring opportunities with communities for a successful career ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/exploring-opportunities-with-communities-for-a-successful-career-188547664" target="_blank">SLIDES</a>***</p>
+                      <p><a href="https://www.linkedin.com/in/shwetha-lakshman-rao-a4a59015/" target="_blank">Shwetha Lakshman Rao, Sr. MTS , VMware software India & City Director - Women Who Code Bangalore </a></p>
+                      <p> Moderated by <a href="https://www.linkedin.com/in/bhuvanas" target="_blank"> Bhuvaneswari Subramani, AWS re:Invent Diversity Scholarship Recipient </a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>12:30 PM - 1:10 PM</p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Plant Monitoring & Automatically Water System using AWS IoT.</p>
+                      <p><a href="https://www.linkedin.com/in/sekharrangam/" target="_blank"> Sekhar Rangam, Manager - Sr. Technical Architect, BRIDGEi2i Analytics Solutions </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Refactoring to Serverless -- Translating common application
+                        architecture patterns to serverless on AWS ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/refactoring-to-serverless" target="_blank">SLIDES</a>***
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/hnprashanth/" target="_blank"> Prashanth HN, Co-Founder, WheelsBox.com </a></p>
+                      <p><a href="https://www.linkedin.com/in/adithyakreddy/" target="_blank"> Aditya Reddy, Software Developer, Branch Insurance </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Lets Talk AI with the Avengers - Building a Conversational AI
+                        Assistant with AWS Lambda and Google Home.
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/divyakrishnamurthi/" target="_blank"> Divya Krishnamurthi, Practice Manager,  Akamai Technologies </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Building Efficient, Scalable and Resilient Front-end logging service
+                        with AWS  ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/building-efficient-scalable-and-resilient-frontend-logging-service-with-aws-188548083" target="_blank">SLIDES</a>***
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/kokilavani-kathiresan" target="_blank"> Kokilavani Kathiresan, Software Developer, Intuit </a></p>
+                      <p><a href="https://www.linkedin.com/in/ravikumar-kotha-33251518" target="_blank"> Ravikumar Kota, Software Developer, Intuit </a></p>
+                      <p><a href="https://www.linkedin.com/in/shailja-agarwala-4a588185" target="_blank"> Shailja Agarwala, Software Developer, Intuit</a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr gap">
+                  <div class="td idx">
+                    <div>
+                      <p>1:10 PM - 2:10 PM</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Lunch</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>2:10 PM - 2:50 PM</p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Leveraging Machine Learning to Reduce Mean Time to Identify and
+                        Resolve Issues when handling Systems/Applications at Scale.
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/paulrajesh/" target="_blank"> Paul Rajesh, Director India Sales, Sumo Logic</a></p>
+                      <p><a href="https://www.linkedin.com/in/vikas-srivastava-47a6482b/" target="_blank"> Vikas Srivastava, Lead SRE, Sumo Logic</a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Making Lambda simpler for data scientists.
+                      </p>
+                      <p><a href="https://linkedin.com/in/palnabarun" target="_blank"> Nabarun Pal, Platform Engineer, Rorodata </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Complex architectures for authentication and authorization on AWS.
+                      </p>
+                      <p><a href="https://aws.amazon.com/developer/community/heroes/boyan-dimitrov/" target="_blank"> Boyan Dimitrov, AWS Community Hero, Germany </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Our journey with AWS from 0(ZERO) orders to 6 digit mark ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/medlife-journey-with-aws" target="_blank">SLIDES</a>***</p>
+                      <p><a href="https://www.linkedin.com/in/praneshvittal/" target="_blank"> Pranesh Vittal, Database Architect, Medlife.com </a></p>
+                      <p><a href="https://www.linkedin.com/in/prasanna-desai-6b785562/" target="_blank"> Prasanna Desai, Senior Build And Release Engineer, Medlife.com  </a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>3:00 PM - 3:40 PM</p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Building Digital Human by using AWS Sumerian.</p>
+                      <p><a href="https://www.linkedin.com/in/ilanchezhian/" target="_blank"> Ilanchezhian Ganesamurthy, Enterprise Architect, EVRY </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Kubernetes on AWS (using Amazon EKS).
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/akash-agrawal-58a97813/" target="_blank"> Akash Agrawal, GDE in cloud</a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Simplifying Real Time Data Analytics with Docker, IoT & AWS
+                        Rekognition Service.
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/ajeetsraina/" target="_blank"> Ajeet Singh Raina, Docker Captain and Docker Bangalore Community Leader </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Lessons learnt building a Distributed Linked List on S3 ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/lessons-learnt-building-a-distributed-linked-list-on-s3-188550952" target="_blank">SLIDES</a>***</p>
+                      <p><a href="https://www.linkedin.com/in/themanikjindal/" target="_blank"> Manik Jindal, Computer Scientist, Adobe </a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tr gap ">
+                  <div class="td idx">
+                    <div>
+                      <p>3:40 PM - 3:50 PM</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Tea Break</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>3:50 PM - 4:30 PM</p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Leveraging Micronaut on AWS Lambda.</p>
+                      <p><a href="https://www.linkedin.com/in/nareshak/" target="_blank"> Naresha K, Organiser, Bangalore Groovy User Group  </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Security Best Practices for Kubernetes.
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/neependra/" target="_blank"> Neependra Khare, Founder and Principal Consultant, CloudYuga Technologies </a></p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>
+                        Adopting Serverless Culture: Taking your team to v2.0 of your serverless product ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/serverless-culture" target="_blank">SLIDES</a>***
+                      </p>
+                      <p><a href="https://www.linkedin.com/in/gprasadholla/" target="_blank"> Guruprasad Holla, Founder, Quiznext </a> </p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Cloud Security ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/cloud-security-188551271" target="_blank">SLIDES</a>***</p>
+                      <p><a href="https://www.linkedin.com/in/amar-prusty-07913028/" target="_blank"> Amar Prusty, Cloud-Data Center Consultant Architect, DXC Technology</a></p>
+                    </div>
+                  </div>
+                </div>
+              <div class="tr">
+                <div class="td idx">
+                  <div>
+                    <p>04:40 PM - 5:20 PM</p>
+                  </div>
+                </div>
+                <div class="td">
+                  <div>
+                    <p>Become Thanos of the LambdaLand: Wield all the Infinity Stones.</p>
+                    <p><a href="https://www.linkedin.com/in/srushith/" target="_blank">Srushith Repakula, Head of Engineering, KonfHub</a></p>
+                  </div>
+
+                </div>
+                <div class="td">
+                  <div>
+                    <p>
+                        Infrastructure Provisioning and Automation for Large Enterprises.
+                    </p>
+                    <p><a href="https://www.linkedin.com/in/dilip-kola-904b1515/" target="_blank">Dilip Kola, Co-Founder & CTO, Tensult</a></p>
+                    <p><a href="https://www.linkedin.com/in/anirudhbaskaran/" target="_blank">Anirudh Baskaran, Co-Founder & CEO, Tensult</a></p>
+                  </div>
+                </div>
+                <div class="td">
+                  <div>
+                    <p>
+                        Log Analytics with ELK Stack
+                        (Architecture for aggressive cost optimisation and infinite data scale)  ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/log-analytics-with-elk-stack" target="_blank">SLIDES</a>***
+                    </p>
+                    <p><a href="https://www.linkedin.com/in/denis-dsouza/">Denis D'Souza, DevOps Engineer, Moonfrog Labs</a></p>
+                  </div>
+
+                </div>
+                <div class="td">
+                  <div>
+                    <p>AWS Secrets for Best Practices ***<a href="https://www.slideshare.net/AWSUsersGroupBengalu/aws-secrets-for-best-practices-188551667" target="_blank">SLIDES</a>***</p>
+                    <p><a href="https://www.linkedin.com/in/vijayanirmalagopal-5a54159a/">Vijayanirmala, Technical Lead - Cloud DevOps Solutions Engineering, Sonata Software</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="tr gap ">
+                <div class="td idx">
+                  <div>
+                    <p>5:20 PM - 5:45 PM</p>
+                  </div>
+                </div>
+                <div class="td" colspan="4">
+                  <div>
+                    <p>Networking</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tr last">
+                <div class="td idx">
+                  <div>
+                    <p>5:45 PM - 6:10 PM</p>
+                  </div>
+                </div>
+                <div class="td" colspan="4">
+                  <div>
+                    <p>Closing Note</p>
+                  </div>
+                </div>
+              </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="agenda-section">
+          <h4 class="main-heading-ttl text-center white-text">Agenda</h4>
+          <div class="coming-soon white-text">
+            <button class="btn btn-warning btn-register-agenda" type="button" data-toggle="modal" data-target="#register">Notify
+              me</button>
+            <!-- <a href="https://sessionize.com/awscommunitydayindia/" class="btn btn-warning" target="_blank">Submit</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-tickets text-center inv" id="workshop">
+      <div class="container">
+        <h4 class="main-heading-ttl text-center">Workshops</h4>
+        <div class="row flex-it">
+          <div class="col-md-3">
+            <div class="card tick_work_1 with_icon dark">
+              <h4 class="heading-ttl">Containers</h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Containers Workshop </p>
+              <button type="button" data-toggle="modal" data-target="#workshop_4">Register</button> 
+            </div>
+          </div>
+         
+          <div class="col-md-3">
+            <div class="card tick_work_2 with_icon dark">
+              <h4 class="heading-ttl">Machine Learning</h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Machine Learning </p>
+              <button type="button" data-toggle="modal" data-target="#workshop_3">Register</button>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card tick_work_3 with_icon">
+              <h4 class="heading-ttl">Serverless</h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Serverless workshop </p>
+              <button type="button" data-toggle="modal" data-target="#workshop_1">Register</button>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card tick_work_4 with_icon dark">
+              <h4 class="heading-ttl">Alexa</h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Alexa Workshop </p>
+              <button type="button" data-toggle="modal" data-target="#workshop_2">Register</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 
+    <div class="section section-5" id="sponsors">
+
+      <div class="container">
+        <div class="sponsors">
+          <h4 class="main-heading-ttl text-center">Our Esteemed Sponsors</h4>
+          <div class="cats">
+            <div class="pltnm">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Platinum</span></div>
+                </div>
+                <div class="f1">
+                  <div class="jfrog sq">
+                    <a href="https://jfrog.com/" target="_blank">Jfrog</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="alexa">
+                    <a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="freshworks">
+                    <a href="https://www.freshworks.com" target="_blank">Freshworks</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gld">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Gold</span></div>
+                </div>
+                <div class="f1">
+                  <div class="elastic">
+                    <a href="https://elastic.co" target="_blank">Elastic</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="postman">
+                    <a href="https://getpostman.com" target="_blank">Postman</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="epsilon">
+                    <a href="https://india.epsilon.com" target="_blank">Epsilon</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slvr">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Silver</span></div>
+                </div>
+                <div class="f1">
+                  <div class="sumologic">
+                    <a href="https://sumologic.com" target="_blank">Sumologic</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="jetbrains sq">
+                    <a href="https://jetbrains.com" target="_blank">Jetbrains</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="powerup">
+                    <a href="https://powerupcloud.com" target="_blank">Powerup</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="tensult sq">
+                    <a href="https://tensult.com" target="_blank">Tensult</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="cloudyuga sq">
+                    <a href="https://cloudyuga.guru" target="_blank">Cloudyuga</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="hasura">
+                    <a href="https://hasura.io/" target="_blank">Hasura</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cmnty">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Community</span></div>
+                </div>
+                <div class="f1">
+                  <div class="wwc sq">
+                    <a href="https://www.womenwhocode.com/bangalore" target="_blank">Women Who Code Bangalore</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="wheelsbox">
+                    <a href="https://wheelsbox.com/" target="_blank">Wheelsbox</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="indianstartups">
+                    <a href="https://www.meetup.com/indianstartupsbangalore/" target="_blank">Indian Startups Bangalore</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="wone">
+                    <a href="https://www.wonecreations.com/" target="_blank">Wone</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="konfhub">
+                    <a href="https://konfhub.com/" target="_blank">Konfhub</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="fame">
+                    <a href="http://www.fametechnologies.in/" target="_blank">Fame Technologies</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="fbdcblr">
+                    <a href="https://www.facebook.com/groups/DevCIndia/" target="_blank">FB Developer Circles</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="goclouds">
+                    <a href="https://www.goclouds.com/" target="_blank">Go Clouds</a>
+                  </div>
+                </div>
+                 <div class="f1">
+                  <div class="knowledgehut">
+                    <a href="https://www.knowledgehut.com/" target="_blank">KnowledgeHut</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="efy">
+                    <a href="https://efy.in/" target="_blank">EFY</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="section-8" id="speakers">
+      <div class="container">
+        <div class="speakers">
+          <h4 class="main-heading-ttl text-center">Speakers</h4>
+          <div class="spk_lst flex-it">
+           <div class="coming-soon">
+              <p>Become a speaker - <a href="https://sessionize.com/awscommunitydayindia/" target="_blank">propose a session</a></p>
+            </div>
+           <!-- <div class="spk_itm_col">
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/gerard_sans.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Gerard Sans</b>
+                    <br>
+                    <small>Developer Advocate, AWS</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/diana.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Diana Cruz Solash</b>
+                    <br>
+                    <small>VP Inclusion and Diversity, Infor</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/shwetha.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Shwetha Lakshman Rao</b>
+                    <br>
+                    <small>Sr. MTS , VMware software India & City Director - Women Who Code Bangalore</small>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/akash_agrawal.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Akash Agrawal</b>
+                    <br>
+                    <small>GDE in cloud</small>
+                  </p>
+                </div>
+              </div>
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/amar_prusty.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Amar Prusty</b>
+                    <br>
+                    <small>Cloud-Data Center Consultant Architect, DXC Technology</small>
+                  </p>
+                </div>
+              </div>
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/aravind_autrevu.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Aravind Putrevu</b>
+                    <br>
+                    <small>Developer Advocate, Elastic</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/denis.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Denis D'Souza</b>
+                    <br>
+                    <small>DevOps Engineer, Moonfrog Labs</small>
+                  </p>
+                </div>
+              </div>
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/karthik.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b> Karthik Ragubathy </b>
+                    <br>
+                    <small> Solutions Architect, Alexa Skills Kit </small>
+                  </p>
+                </div>
+              </div>
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/guruprasad_holla.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Guruprasad Holla</b>
+                    <br>
+                    <small>Founder- Quiznext</small>
+                  </p>
+                </div>
+              </div>
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/nabarun_pal.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Nabarun Pal</b>
+                    <br>
+                    <small>Platform Engineer, Rorodata</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/naresha_1.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Naresha K</b>
+                    <br>
+                    <small>Organiser of Bangalore Groovy User Group</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/palani.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Palanisamy Chellappan</b>
+                    <br>
+                    <small>Enterprise Architect, Brillio</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/saifur.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Saifur Rahman Mohsin</b>
+                    <br>
+                    <small>Developer, Web, Mobile and Voice Driven Apps</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/prashanth_hn.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Prashanth HN</b>
+                    <br>
+                    <small>Co-Founder, WheelsBox.com</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/aditya_reddy.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Aditya Reddy</b>
+                    <br>
+                    <small>Software Developer, Branch Insurance</small>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/dilip_kola.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Dilip Kola</b>
+                    <br>
+                    <small>Co-Founder & CTO, Tensult</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/srushith.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Srushith Repakula</b>
+                    <br>
+                    <small>Head of Engineering, KonfHub</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/pranesh_vittal.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Pranesh Vittal</b>
+                    <br>
+                    <small>Database Architect, Medlife.com</small>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/prasanna_desai.png" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Prasanna Desai</b>
+                    <br>
+                    <small>Senior Build and Release Engineer, Medlife.com</small>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/ilanchezhian.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Ilanchezhian Ganesamurthy</b>
+                    <br>
+                    <small>Enterprise Architect, EVRY</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/andrew_martin.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Andrew Martin</b>
+                    <br>
+                    <small>Senior Cloud Engineer, Slack</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/boyan_dimitrov.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Boyan Dimitrov</b>
+                    <br>
+                    <small>AWS Community Hero, Germany</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/divya_krishnamurthi.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Divya Krishnamurthi</b>
+                    <br>
+                    <small>Practice Manager, Akamai Technologies</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/gangireddy.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Gangireddy D</b>
+                    <br>
+                    <small>SRE, Knolskape</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/kokilavani_kathiresan.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Kokilavani Kathiresan</b>
+                    <br>
+                    <small>Software Developer, Intuit</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/ravikumar_kota.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Ravikumar Kota</b>
+                    <br>
+                    <small>Software Developer, Intuit</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/shailja_agarwala.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Shailja Agarwala</b>
+                    <br>
+                    <small>Software Developer, Intuit</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/krishna_chaitanya_sadhu.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Krishna Chaitanya Sadhu</b>
+                    <br>
+                    <small>Architect, Infor India Pvt Ltd</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/manik_jindal.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Manik Jindal</b>
+                    <br>
+                    <small>Computer Scientist, Adobe</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/neependra_khare.jpeg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Neependra Khare</b>
+                    <br>
+                    <small>Founder and Principal Consultant at CloudYuga Technologies</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/nirmala.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Vijayanirmala</b>
+                    <br>
+                    <small>Technical Lead - Cloud DevOps Solutions Engineering, Sonata Software</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/paul_rajesh.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Paul Rajesh</b>
+                    <br>
+                    <small>Director India Sales, Sumo Logic</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/vikas_srivastava.png" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Vikas Srivastava</b>
+                    <br>
+                    <small>Lead SRE, Sumo Logic</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/sekhar_rangam.jpg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Sekhar Rangam</b>
+                    <br>
+                    <small>Manager - Sr. Technical Architect, BRIDGEi2i Analytics Solutions</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/ajeet_singh_raina.jpeg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Ajeet Singh Raina</b>
+                    <br>
+                    <small>Docker Captain and Docker Bangalore Community Leader</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im"><img src="images/speakers/anirudh_baskaran.jpeg" alt=""></div>
+                <div class="namenid">
+                  <p>
+                    <b>Anirudh Baskaran</b>
+                    <br>
+                    <small>Co-Founder & CEO, Tensult</small>
+                  </p>
+                </div>
+              </div>
+
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-6 inv" id="volunteers">
+      <div class="container">
+        <div class="volunteers">
+          <h4 class="main-heading-ttl text-center">Volunteers</h4>
+          <div class="vl-row-list">
+            <div class="vl-i  flex-it hcenter">
+              <div class="person" data-fname="Ankit Kumar" data-lname="Gupta">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/akgprogrammer/">
+                    <i class="icon large ion-logo-linkedin"></i>@akgprogrammer</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Anurag" data-lname="Kale">
+                <div class="img">
+                  <a target="_blank" herf="https://www.linkedin.com/in/anuragkale/">
+                    <i class="icon large ion-logo-linkedin"></i>@anuragkale</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Bhuvaneswari" data-lname="Subramani">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/bhuvanas/">
+                    <i class="icon large ion-logo-linkedin"></i>@bhuvanas</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Dhaval" data-lname="Nagar">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/dhavaln/">
+                    <i class="icon large ion-logo-linkedin"></i>@dhavaln</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Dijeesh" data-lname="Padinharethil">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/dijeesh-padinharethil/">
+                    <i class="icon large ion-logo-linkedin"></i>@dijeesh-padinharethil</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Dipali" data-lname="Kulshrestha">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/dipalik/">
+                    <i class="icon large ion-logo-linkedin"></i>@dipalik</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Gaurav" data-lname="Kamboj">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/gauravkamboj/">
+                    <i class="icon large ion-logo-linkedin"></i>@gauravkamboj</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Gokul" data-lname="Karthik">
+                <div class="img"></div>
+              </div>
+              <div class="person" data-fname="Jayesh" data-lname="Ahire">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/jayesh-ahire/">
+                    <i class="icon large ion-logo-linkedin"></i>@jayesh-ahire</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Jeevan" data-lname="Dongre">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/jeevandongre/">
+                    <i class="icon large ion-logo-linkedin"></i>@jeevandongre</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Nilesh" data-lname="Vaghela">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/nilesh-vaghela/">
+                    <i class="icon large ion-logo-linkedin"></i>@nilesh-vaghela</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Parthasarathi" data-lname="Balasubramanian">
+                <div class="img">
+                  <a target="_blank" href="www.linkedin.com/in/parthasarathi-b/">
+                    <i class="icon large ion-logo-linkedin"></i>@parthasarathi-b</a>
+                </div>
+              </div>
+              <div class="person" data-fname="PhaniKumar" data-lname="Balasubramanian">
+                <div class="img"></div>
+              </div>
+              <div class="person" data-fname="Ragavendran" data-lname="Chandrasekaran">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/ragavhadoop/">
+                    <i class="icon large ion-logo-linkedin"></i>@ragavhadoop</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Sathyajith" data-lname="Bhat">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/sathyabhat/">
+                    <i class="icon large ion-logo-linkedin"></i>@sathyabhat</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Sridevi" data-lname="Murugayen">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/sridevi-murugayen/">
+                    <i class="icon large ion-logo-linkedin"></i>@sridevi-murugayen</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Sukanya" data-lname="Mandal">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/sukanyamandal/">
+                    <i class="icon large ion-logo-linkedin"></i>@sukanyamandal</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer text-center">
+      <div class="container">
+        <div class="col-lg-12">
+          <span>For any queries reach out to </span><a href="mailto:help@awsug.in">help@awsug.in </a>
+        </div>
+      </div>
+    </div>
+    <div class="section section-7" id="subscribe">
+      <div class="container">
+        <div class="sponsors">
+          <div class="foot-fk">
+            <h4 class="main-heading-ttl">SHOW YOUR INTEREST</h4>
+            <div class="row flex-it vcenter">
+              <div class="col-md-12">
+                <!-- sharing buttons -->
+                <div class="sharethis-inline-share-buttons"></div>
+              </div>
+            </div>
+            <p class="text-center hide">
+              <small>Please do read the Code of Conduct for this event.</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="floating_toast">
+    <a href="com_info">About Community Day</a>
+  </div>
+  <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen"
+            oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-------register modal ------------->
+  <div id="register" class="modal fade register-form" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title heading-ttl">Register</h4>
+        </div> -->
+        <div class="modal-body">
+          <div class="form-title">
+            <h3>Register</h3>
+            <button type="button" class="register-form-close-btn" data-dismiss="modal">&times;</button>
+          </div>
+
+          <form id="register-form" class="register-form-inner" method="POST">
+            <div class="group">
+              <input type="text" name="name" id="name" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label><i class="input-ikon fa fa-user-o"></i><span class="span-input">Name <span class="text-danger">*</span></span></label>
+            </div>
+
+            <div class="group">
+              <input type="email" name="email" id="email" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label><i class="input-sifre-ikon fa fa-envelope-o"></i><span class="span-input">Email <span class="text-danger">*</span></span></label>
+            </div>
+            <div class="group">
+              <input type="text" name="designation" id="designation" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label><i class="input-sifre-ikon fa fa-graduation-cap"></i><span class="span-input">Designation <span
+                    class="text-danger">*</span></span></label>
+            </div>
+            <div class="group">
+              <input type="text" name="organisation" id="organisation" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label><i class="input-sifre-ikon fa fa-building-o"></i><span class="span-input">Organisation <span class="text-danger">*</span></span></label>
+            </div>
+            <div class="group w-100">
+              <input id="phone_number" name="phone" class="w-100" type="text" placeholder="xxxxxxxxxx" maxlength="13"
+                required>
+              <!-- <input type="text" name="phone" id="phone_number" maxlength="13" required> -->
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <span class="error text-danger">
+                Please enter valid mobile number
+              </span>
+              <!-- <label>
+                  <i class="input-sifre-ikon fa fa-phone"></i>
+                  <span class="span-input">Phone Number <span class="text-danger">*</span></span>
+                </label> -->
+            </div>
+
+
+            <div class="group">
+              <input type="text" name="city" id="city" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>
+                <i class="input-sifre-ikon fa fa-map-marker"></i>
+                <span class="span-input">City <span class="text-danger">*</span></span>
+              </label>
+            </div>
+            <div class="consent-row">
+              <span class="switch">
+                <input type="checkbox" name="consent" class="switch" id="idChk-normal" checked value="true">
+                <label for="idChk-normal">Yes, I'd like KonfHub Technologies to provide my contact information to
+                  Amazon Web Services (AWS) so AWS can share the latest AWS news and offers with me by email, post or
+                  telephone.</label>
+              </span>
+            </div>
+            <span class="accept-terms text-danger">
+              Please check the terms and condition switch control
+            </span>
+            <div class="form-group margin-25_">
+              <input type="submit" class="btn btn-warning btn-register" id="register-btn" value="Register">
+            </div>
+            <div class="powered-logo">
+              <a href="https://konfhub.com/privacypolicy.html" target="_blank"> <img src="images/powered-logo.png"
+                  class="img-responsive"></a>
+            </div>
+            <div class="form-group register-privacy-section">
+              <a href="https://konfhub.com/privacypolicy.html" target="_blank">KonfHub Technologies</a>
+              <a href="https://aws.amazon.com/legal/marketingentities/" target="_blank">Amazon Web Services</a>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+  <div id="snackbar"> Thanks, Your registration has been done successfully. </div>
+  <script type="text/javascript">
+    var latt = 12.9767814;
+    var lngg = 77.6197088;
+    var venue = "Conrad";
+
+    function setCoords(latt, lngg, venue) {
+      this.latt = latt;
+      this.lngg = lngg;
+      this.venue = venue;
+      console.log("clicked");
+      initMap();
+      $(this).addClass("hello");
+    }
+    function initMap() {
+      var uluru = { lat: latt, lng: lngg };
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: uluru,
+        scrollwheel: false
+      });
+      var markerIcon = {
+        url: "https://image.flaticon.com/icons/svg/252/252025.svg",
+        scaledSize: new google.maps.Size(50, 50),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(32, 65),
+        labelOrigin: new google.maps.Point(25, 70)
+      };
+      var markerLabel = venue;
+      var marker = new google.maps.Marker({
+        map: map,
+        animation: google.maps.Animation.DROP,
+        position: uluru,
+        icon: markerIcon,
+        disableDefaultUI: true,
+        label: {
+          text: markerLabel,
+          color: "#eb3a44",
+          fontSize: "16px",
+          fontWeight: "bold"
+        }
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSK4vqrOG3caqUr6dxAVhA7MrdMmq63q0&callback=initMap"></script>
+  <!-- getting utm parameter and passing to konfhub start -->
+  <script>
+    $(".buy-ticket-link").on("click", () => {
+      checkForUtmAvilableOrNot(decodeURIComponent(location.href)).then((formResolve) => {
+        window.open("https://konfhub.com/awsdaysblr?" + formResolve, "_blank");
+      }).catch((fromReject) => {
+        window.open("https://konfhub.com/awsdaysblr", "_blank");
+      });
+    });
+
+    let checkForUtmAvilableOrNot = (_currentUrl) => {
+      return new Promise((resolve, reject) => {
+        if (_currentUrl.indexOf("utm_source") > -1) {
+          let qp = _currentUrl.slice(_currentUrl.indexOf('?') + 1)
+          let a = qp.split("&");
+          let _utmPara = "";
+          a.forEach((v, j) => {
+            try {
+              if (j > 2) return;
+              let _utm = checkForSpecialChar(v);
+              _utmPara += _utm == 1 ? j == 2 ? v : v + "&" : v.slice(0, _utm);
+            } catch (err) {
+              console.log(err);
+            }
+          });
+          resolve(_utmPara);
+        } else {
+          reject(0);
+        }
+      })
+    };
+    let specialChars = "<>@!#$?%^&*()+[]{}:;|'\"\\,./~`-";
+    let checkForSpecialChar = function (string) {
+      let _indexOf = string.length;
+      for (i = 0; i < specialChars.length; i++) {
+        if (string.indexOf(specialChars[i]) > -1) {
+          _indexOf = _indexOf > string.indexOf(specialChars[i]) ? string.indexOf(specialChars[i]) : _indexOf
+        }
+      }
+      return _indexOf != string.length ? _indexOf : 1;
+    }
+  </script>
+  <script src="js/intlTelInput.js"></script>
+  <script>
+    var input = document.querySelector("#phone_number")
+
+    var iti = window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // hiddenInput: "full_number",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      nationalMode: true,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      placeholderNumberType: "MOBILE",
+      // preferredCountries: ['cn', 'jp'],
+      separateDialCode: true,
+      utilsScript: "js/utils.js",
+    });
+
+
+    $('#idChk-normal').change(function () {
+      cb = $(this);
+      cb.val(cb.prop('checked'));
+    });
+
+    $('form').submit(function (event) {
+      event.preventDefault();
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var designation = document.getElementById("designation").value;
+      var organisation = document.getElementById("organisation").value;
+
+      var city = document.getElementById("city").value;
+      var consent = document.getElementById("idChk-normal").value;
+      let utm = {};
+      if (location.search) {
+        const urlParams = new URLSearchParams(location.search);
+        for (const [key, value] of urlParams) {
+          utm[key] = value;
+        }
+      } else {
+        utm = undefined
+      }
+      console.log(utm);
+      var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
+      if (!JSON.parse(consent)) {
+        [].forEach.call(document.querySelectorAll('.accept-terms'), function (el) {
+          el.style.display = 'block';
+        });
+        return false;
+      }
+      let dataBody = {
+        "user_details":
+          [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }],
       };
       if (location.search) {
         dataBody['utm'] = utm

@@ -3287,3 +3287,16 @@ transition:.2s all;
 .w-100::placeholder {
   color:rgba(137, 137, 137, 0.7);
 }
+
+.modal-ul{
+  list-style: disc;
+  margin-left: 3rem;
+}
+.table-head{
+  background: #f90 !important;
+  color: #fff !important;
+}
+.foot-btn{
+  margin: auto;
+  text-align: center;
+}

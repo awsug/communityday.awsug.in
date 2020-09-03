@@ -2169,10 +2169,21 @@ ul.circle li {
   background: #fff;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
 }
+
+#page .section-9 {
+  /* padding: 100px 0 200px; */
+  padding: 64px 0 64px;
+  background: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+}
 @media only screen and (max-width: 991px) {
   /* line 887, ../sass/shared/_home.scss */
   #page .section-6 {
     padding: 50px 0;
+  }
+
+  #page .section-9 {
+    padding: 24px 0;
   }
 }
 /* line 894, ../sass/shared/_home.scss */
@@ -2194,9 +2205,32 @@ ul.circle li {
   padding: 15px;
   margin: 10px 0;
 }
+
+#page .section-9.inv {
+  background: transparent;
+  box-shadow: none;
+}
+/* line 899, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i {
+  flex-wrap: wrap;
+  justify-content: unset;
+}
+/* line 902, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person {
+  align-items: center;
+  width: 11%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 10px 0;
+}
+
 @media only screen and (min-width: 992px) {
   /* line 914, ../sass/shared/_home.scss */
   #page .section-6 .volunteers .vl-i .person.push {
+    margin-left: 2.5%;
+  }
+  #page .section-9 .ambassadors .vl-i .person.push {
     margin-left: 2.5%;
   }
 }
@@ -2205,9 +2239,24 @@ ul.circle li {
   #page .section-6 .volunteers .vl-i .person {
     width: 33%;
   }
+  #page .section-9 .ambassadors .vl-i .person {
+    width: 25%;
+  }
 }
 /* line 922, ../sass/shared/_home.scss */
 #page .section-6 .volunteers .vl-i .person .img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+#page .section-9 .ambassadors .vl-i .person .img {
   width: 80px;
   height: 80px;
   margin: auto;
@@ -2226,9 +2275,32 @@ ul.circle li {
     height: 75px;
     border-radius: 10px;
   }
+  #page .section-9 .ambassadors .vl-i .person .img {
+    width: 75px;
+    height: 75px;
+    border-radius: 4px;
+  }
 }
 /* line 938, ../sass/shared/_home.scss */
 #page .section-6 .volunteers .vl-i .person .img a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.25s;
+  margin: auto;
+  background: rgba(35, 47, 63, 0.85);
+  color: #00acee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 0;
+  flex-direction: column;
+  transform: translateY(100%);
+}
+#page .section-9 .ambassadors .vl-i .person .img a {
   position: absolute;
   left: 0;
   right: 0;
@@ -2261,6 +2333,19 @@ ul.circle li {
   #page .section-6 .volunteers .vl-i .person .img a i {
     font-size: 18px;
   }
+  #page .section-9 .ambassadors .vl-i .person .img a {
+    transform: translateY(0);
+    background: transparent;
+    font-size: 0;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 0;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+  }
+  /* line 963, ../sass/shared/_home.scss */
+  #page .section-9 .ambassadors .vl-i .person .img a i {
+    font-size: 18px;
+  }
 }
 /* line 969, ../sass/shared/_home.scss */
 #page .section-6 .volunteers .vl-i .person .img:hover a {
@@ -2275,9 +2360,24 @@ ul.circle li {
   display: block;
   font-size: 14px;
 }
+#page .section-9 .ambassadors .vl-i .person .img:hover a {
+  transform: translateY(0);
+}
+/* line 974, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person:before {
+  order: 1;
+  content: attr(data-fname);
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  font-size: 14px;
+}
 @media only screen and (max-width: 991px) {
   /* line 974, ../sass/shared/_home.scss */
   #page .section-6 .volunteers .vl-i .person:before {
+    font-size: 14px;
+  }
+  #page .section-9 .ambassadors .vl-i .person:before {
     font-size: 14px;
   }
 }
@@ -2287,9 +2387,19 @@ ul.circle li {
   order: 2;
   content: attr(data-lname);
 }
+
+#page .section-9 .ambassadors .vl-i .person:after {
+  font-size: 12px;
+  order: 2;
+  content: attr(data-lname);
+}
 @media only screen and (max-width: 991px) {
   /* line 986, ../sass/shared/_home.scss */
   #page .section-6 .volunteers .vl-i .person:after {
+    font-size: 12px;
+  }
+
+  #page .section-9 .ambassadors .vl-i .person:after {
     font-size: 12px;
   }
 }
@@ -2359,6 +2469,74 @@ ul.circle li {
 }
 /* line 1042, ../sass/shared/_home.scss */
 #page .section-6 .volunteers .vl-i .person[data-fname="Sukanya"] .img {
+  background-image: url(../images/vols/Sukanya.png);
+}
+
+#page .section-9 .ambassadors .vl-i .person[data-fname="Ankit Kumar"] .img {
+  background-image: url(../images/vols/AnkitKumar.png);
+}
+/* line 997, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Anurag"] .img {
+  background-image: url(../images/vols/Anurag.png);
+}
+/* line 1000, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Bhuvaneswari"] .img {
+  background-image: url(../images/vols/Bhuvaneswari.png);
+}
+/* line 1003, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Dhaval"] .img {
+  background-image: url(../images/vols/Dhaval.png);
+}
+/* line 1006, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Dijeesh"] .img {
+  background-image: url(../images/vols/Dijeesh.png);
+}
+/* line 1009, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Dipali"] .img {
+  background-image: url(../images/vols/Dipali.png);
+}
+/* line 1012, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Gaurav"] .img {
+  background-image: url(../images/vols/Gaurav.png);
+}
+/* line 1015, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Gokul"] .img {
+  background-image: url(../images/vols/Gokul.png);
+}
+/* line 1018, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Jayesh"] .img {
+  background-image: url(../images/vols/Jayesh.png);
+}
+/* line 1021, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Jeevan"] .img {
+  background-image: url(../images/vols/Jeevan.png);
+}
+/* line 1024, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Nilesh"] .img {
+  background-image: url(../images/vols/Nilesh.png);
+}
+/* line 1027, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Parthasarathi"] .img {
+  background-image: url(../images/vols/Parthasarathi.png);
+}
+/* line 1030, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="PhaniKumar"] .img {
+  background-image: url(../images/vols/PhaniKumar.png);
+}
+/* line 1033, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Ragavendran"] .img {
+  background-image: url(../images/vols/Ragavendran.png);
+}
+/* line 1036, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Sathyajith"] .img {
+  background-image: url(../images/vols/Sathyajith.png);
+}
+/* line 1039, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Sridevi"] .img {
+  background-image: url(../images/vols/Sridevi.png);
+}
+/* line 1042, ../sass/shared/_home.scss */
+#page .section-9 .ambassadors .vl-i .person[data-fname="Sukanya"] .img {
   background-image: url(../images/vols/Sukanya.png);
 }
 

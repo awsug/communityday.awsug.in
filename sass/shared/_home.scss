@@ -1161,6 +1161,175 @@
       }
     }
   }
+  .section-9 {
+    padding: 100px 0 200px;
+    background: #fff;
+    @include theme-shadow;
+    @include respondToBelow(sm) {
+      padding: 50px 0;
+    }
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+    }
+    .ambassadors {
+      .vl-i {
+        flex-wrap: wrap;
+        justify-content: unset;
+        .person {
+          align-items: center;
+          width: 16.666%;
+          display: flex;
+          flex-direction: column;
+          padding: 15px;
+          margin: 10px 0;
+          // @include respondToAbove(md) {
+          //   &:nth-child(13n + 1) {
+          //     margin-left: 7%;
+          //   }
+          // }
+          &.push {
+            @include respondToAbove(md) {
+              margin-left: 2.5%;
+            }
+          }
+          @include respondToBelow(sm) {
+            width: 33%;
+          }
+          .img {
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            @include theme-shadow;
+            position: relative;
+            overflow: hidden;
+            @include respondToBelow(sm) {
+              width: 75px;
+              height: 75px;
+              border-radius: 10px;
+            }
+            a {
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              transition: all 0.25s;
+              margin: auto;
+              background: rgba($black_bg, 0.85);
+              color: #00acee;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5px;
+              font-size: 0;
+              flex-direction: column;
+              transform: translateY(100%);
+              @include respondToBelow(sm) {
+                transform: translateY(0);
+                background: transparent;
+                font-size: 0;
+                align-items: flex-start;
+                justify-content: flex-end;
+                padding-bottom: 0;
+                text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+                i {
+                  font-size: 18px;
+                }
+              }
+            }
+            &:hover {
+              a {
+                transform: translateY(0);
+              }
+            }
+          }
+          &:before {
+            order: 1;
+            content: attr(data-fname);
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+            font-size: 14px;
+
+            @include respondToBelow(sm) {
+              font-size: 14px;
+            }
+          }
+          &:after {
+            font-size: 12px;
+            order: 2;
+            content: attr(data-lname);
+            @include respondToBelow(sm) {
+              font-size: 12px;
+            }
+          }
+          &[data-fname="Jeevan"] .img {
+            background-image: url(../images/vols/jeevan.jpg);
+          }
+          &[data-fname="Sathyajith"] .img {
+            background-image: url(../images/vols/sathya.png);
+          }
+          &[data-fname="Runcy"] .img {
+            background-image: url(../images/vols/runcy.jpg);
+          }
+          &[data-fname="Prashanth"] .img {
+            background-image: url(../images/vols/prashanth.png);
+          }
+          &[data-fname="Krishna"] .img {
+            background-image: url(../images/vols/krishna.jpg);
+          }
+          &[data-fname="Anand"] .img {
+            background-image: url(../images/vols/anand.jpg);
+          }
+          &[data-fname="Rahul"] .img {
+            background-image: url(../images/vols/rahul.jpg);
+          }
+          &[data-fname="Mayank"] .img {
+            background-image: url(../images/vols/mayank.jpg);
+          }
+          &[data-fname="Sahil"] .img {
+            background-image: url(../images/vols/sahil.jpg);
+          }
+          &[data-fname="Harsha"] .img {
+            background-image: url(../images/vols/harsha.jpg);
+          }
+          &[data-fname="Akhil"] .img {
+            background-image: url(../images/vols/akhil.jpg);
+          }
+          &[data-fname="Bhuvaneswari"] .img {
+            background-image: url(../images/vols/bhuvaneswari.jpg);
+          }
+          &[data-fname="Praveen"] .img {
+            background-image: url(../images/vols/veen.jpg);
+          }
+          &[data-fname="Piyush"] .img {
+            background-image: url(../images/vols/piyush.jpg);
+          }
+          &[data-fname="Hari"] .img {
+            background-image: url(../images/vols/hari.jpg);
+          }
+          &[data-fname="Ganesh"] .img {
+            background-image: url(../images/vols/ganesh.jpg);
+          }
+          &[data-fname="Kaivalya"] .img {
+            background-image: url(../images/vols/kaivalya.jpg);
+          }
+          &[data-fname="Gaurav"] .img {
+            background-image: url(../images/vols/gaurav.jpg);
+          }
+
+          &[data-fname="Gladwin"] .img {
+            background-image: url(../images/vols/glady.jpg);
+          }
+        }
+      }
+    }
+  }
   .section-tickets {
     background: #fff;
     padding: 100px 0;

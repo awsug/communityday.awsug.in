@@ -337,6 +337,82 @@
         </div>
       </div>
     </div> -->
+
+<!-- workshop_modal Start  -->
+<div id="workshop_modal" class="modal fade fillo workshop_modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="heading-ttl">
+          <p>Workshops</p>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="page">
+          <div class="section section-tickets text-center inv" id="workshop">
+            <div class="container">
+              <h4 class="main-heading-ttl text-center workshop_title">Thank you for the registration.</h4>
+              <h4 class="main-heading-ttl text-center workshop_title">WE ALSO HAVE FOUR AWSOME WORKSHOPS ON 17th OCT</h4>
+              <div class="row flex-it">
+
+                <div class="col-md-3">
+                  <div class="card tick_work_1 with_icon dark">
+                    <h4 class="heading-ttl">Containers</h4>
+                    <div class="bg_img">
+                      <img src="images/Amazon-Elastic-Container.png" class="img-responsive">
+                    </div>
+                    <p>Gets you access to Containers Workshop </p>
+                    <button type="button" data-toggle="modal" data-target="#workshop_4">Details</button>
+                    <!-- <button type="button">Announcing Soon</button> -->
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="card tick_work_2 with_icon dark">
+                    <h4 class="heading-ttl">Machine Learning</h4>
+                    <div class="bg_img"><img src="images/Machine-Learning.svg" class="img-responsive"></div>
+                    <p>Gets you access to Machine Learning </p>
+                    <button type="button" data-toggle="modal" data-target="#workshop_3">Details</button>
+                    <!-- <button type="button">Announcing Soon</button> -->
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="card tick_work_3 with_icon">
+                    <h4 class="heading-ttl">Serverless</h4>
+                    <div class="bg_img"><img src="images/AWS-Lambda.svg" class="img-responsive"></div>
+                    <p>Gets you access to Serverless workshop </p>
+                    <button type="button" data-toggle="modal" data-target="#workshop_1">Details</button>
+                    <!-- <button type="button">Announcing Soon</button> -->
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card tick_work_4 with_icon dark">
+                    <h4 class="heading-ttl">Alexa</h4>
+                    <div class="bg_img"><img src="images/Amazon_Alexa.png" class="img-responsive"></div>
+                    <p>Gets you access to Alexa Workshop </p>
+                    <button type="button" data-toggle="modal" data-target="#workshop_2">Details</button>
+                    <!-- <button type="button">Announcing Soon</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+ 
+
     <!-- Modals-->
     <div id="workshop_1" class="modal fade fillo" role="dialog">
       <div class="modal-dialog">
@@ -1957,7 +2033,7 @@
   </div>
 
   <!-- Iframe RegisterIframe_4 Start  -->
-  <div id="RegisterIframe_4" class="modal fade fillo RegisterIframe" role="dialog">
+  <div id="RegisterIframe_4" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
     <div class="modal-dialog">
   
       <!-- Modal content-->
@@ -1981,7 +2057,7 @@
  <!-- Iframe RegisterIframe_4 Close  -->
 
 <!-- Iframe RegisterIframe_3 Start  -->
-<div id="RegisterIframe_3" class="modal fade fillo RegisterIframe" role="dialog">
+<div id="RegisterIframe_3" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -2005,7 +2081,7 @@
 <!-- Iframe RegisterIframe_3 Close  -->
 
 <!-- Iframe RegisterIframe_1 Start  -->
-<div id="RegisterIframe_1" class="modal fade fillo RegisterIframe" role="dialog">
+<div id="RegisterIframe_1" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -2029,7 +2105,7 @@
 <!-- Iframe RegisterIframe_1 Close  -->
 
 <!-- Iframe RegisterIframe_2 Start  -->
-<div id="RegisterIframe_2" class="modal fade fillo RegisterIframe" role="dialog">
+<div id="RegisterIframe_2" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -2054,7 +2130,9 @@
 
 
 
+
   <div id="snackbar"> Thanks, Your registration has been done successfully. </div>
+
   <script type="text/javascript">
     var latt = 12.9767814;
     var lngg = 77.6197088;
@@ -2231,10 +2309,11 @@
           document.getElementById("idChk-normal").checked = true;
           document.getElementById("register-btn").disabled = false;
           $('#register').modal('hide');
-          // snackbar alert open 
+        //   // snackbar alert open 
           var x = document.getElementById("snackbar");
           x.className = "show";
           setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
+          $("#workshop_modal").modal()
         });
       } else {
         [].forEach.call(document.querySelectorAll('.error'), function (el) {
@@ -2242,7 +2321,11 @@
         });
         return false
       }
-    })
+    });
+
+    function openworkshopmodal(){
+
+    }
   </script>
 
 

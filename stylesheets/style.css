@@ -2833,7 +2833,7 @@ ul.circle li {
   /* line 1220, ../sass/shared/_home.scss */
   #page .section-tickets .row > div:nth-child(1) {
     order: 1;
-    margin-right: 15px;
+    margin-right: 13px;
   }
   /* line 1224, ../sass/shared/_home.scss */
   #page .section-tickets .row > div:nth-child(2) {
@@ -3509,6 +3509,9 @@ transition:.2s all;
     width: 35%;
     margin: auto;
   }
+ .modal{
+    overflow: auto !important;
+  }
 }
 @media (min-width:320px) and (max-width:767px){
   .register-form .modal-dialog {
@@ -3539,6 +3542,7 @@ transition:.2s all;
     margin-top: 35px;
     margin-bottom: 60px;
   }
+ 
 }
 
 .w-100::placeholder {
@@ -3547,9 +3551,15 @@ transition:.2s all;
 
 .RegisterIframe .modal-body{
   padding: 0px !important;
-  
 }
 .RegisterIframe iframe {
- 
   border:none !important;
+}
+.workshop_title {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+.workshop_modal #page .section-tickets {
+  background: rgb(255, 255, 255);
+  padding: 10px 0px;
 }

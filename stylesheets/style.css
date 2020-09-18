@@ -3544,3 +3544,12 @@ transition:.2s all;
 .w-100::placeholder {
   color:rgba(137, 137, 137, 0.7);
 }
+
+.RegisterIframe .modal-body{
+  padding: 0px !important;
+  
+}
+.RegisterIframe iframe {
+ 
+  border:none !important;
+}

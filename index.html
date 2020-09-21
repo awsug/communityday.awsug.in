@@ -337,6 +337,81 @@
         </div>
       </div>
     </div> -->
+
+<!-- workshop_modal Start  -->
+<div id="workshop_modal" class="modal fade fillo workshop_modal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="heading-ttl">
+          <p>Workshops</p>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div id="page">
+          <div class="section section-tickets text-center inv">
+            <div class="container">
+              <h4 class="main-heading-ttl text-center workshop_title">Thank you for the registration.</h4>
+              <h4 class="main-heading-ttl text-center workshop_title">WE ALSO HAVE FOUR AWSOME WORKSHOPS ON 17th OCT</h4>
+              <div class="row flex-it">
+
+                <div class="col-md-3">
+                  <div class="card tick_work_1 with_icon dark">
+                    <h4 class="heading-ttl">Containers</h4>
+                    <div class="bg_img">
+                      <img src="images/Amazon-Elastic-Container.png" class="img-responsive">
+                    </div>
+                    <p>Gets you access to Containers Workshop </p>
+                    <button type="button" data-toggle="modal" data-target="#workshop_4">Details</button>
+                    <!-- <button type="button">Announcing Soon</button> -->
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="card tick_work_2 with_icon dark">
+                    <h4 class="heading-ttl">Machine Learning</h4>
+                    <div class="bg_img"><img src="images/Machine-Learning.svg" class="img-responsive"></div>
+                    <p>Gets you access to Machine Learning </p>
+                    <button type="button" data-toggle="modal" data-target="#workshop_3">Details</button>
+                    <!-- <button type="button">Announcing Soon</button> -->
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="card tick_work_3 with_icon">
+                    <h4 class="heading-ttl">Serverless</h4>
+                    <div class="bg_img"><img src="images/AWS-Lambda.svg" class="img-responsive"></div>
+                    <p>Gets you access to Serverless workshop </p>
+                    <button type="button" data-toggle="modal" data-target="#workshop_1">Details</button>
+                    <!-- <button type="button">Announcing Soon</button> -->
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card tick_work_4 with_icon dark">
+                    <h4 class="heading-ttl">Alexa</h4>
+                    <div class="bg_img"><img src="images/Amazon_Alexa.png" class="img-responsive"></div>
+                    <p>Gets you access to Alexa Workshop </p>
+                    <button type="button" data-toggle="modal" data-target="#workshop_2">Details</button>
+                    <!-- <button type="button">Announcing Soon</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+ 
+
     <!-- Modals-->
     <div id="workshop_1" class="modal fade fillo" role="dialog">
       <div class="modal-dialog">
@@ -444,7 +519,7 @@
           <div>
             <img src=""></img>
           </div>
-
+        
           <div class="modal-footer">
 
             <br>
@@ -484,7 +559,8 @@
             <br>
             <hr>
             <div class="foot-btn d-flex justify-content-center">
-              <a href="https://konfhub.com/acd-serverless" target="_blank" class="button" >Register</a>
+              <!-- <a href="https://konfhub.com/acd-serverless" target="_blank" class="button" >Register</a> -->
+              <button type="button" data-toggle="modal" data-target="#RegisterIframe_1">Register</button>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
@@ -577,7 +653,8 @@
             <br>
             <hr>
             <div class="foot-btn d-flex justify-content-center">
-              <a href="https://konfhub.com/acd-alexa" target="_blank" class="button" >Register</a>
+              <!-- <a href="https://konfhub.com/acd-alexa" target="_blank" class="button" >Register</a> -->
+              <button type="button" data-toggle="modal" data-target="#RegisterIframe_2">Register</button>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
@@ -691,7 +768,8 @@
             <br>
             <hr>
             <div class="foot-btn d-flex justify-content-center">
-              <a href="https://konfhub.com/acd-ml" target="_blank" class="button" >Register</a>
+              <!-- <a href="https://konfhub.com/acd-ml" target="_blank" class="button" >Register</a> -->
+              <button type="button" data-toggle="modal" data-target="#RegisterIframe_3">Register</button>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
@@ -762,7 +840,7 @@
           <div>
             <img src=""></img>
           </div>
-
+          
           <div class="modal-footer">
 
             <br>
@@ -800,7 +878,8 @@
             <br>
             <hr>
             <div class="foot-btn d-flex justify-content-center">
-              <a href="https://konfhub.com/acd-containers" target="_blank" class="button" >Register</a>
+              <!-- <a href="https://konfhub.com/acd-containers" target="_blank" class="button" >Register</a> -->
+              <button type="button" data-toggle="modal" class="button" data-target="#RegisterIframe_4">Register</button>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
@@ -1951,7 +2030,108 @@
 
     </div>
   </div>
+
+  <!-- Iframe RegisterIframe_4 Start  -->
+  <div id="RegisterIframe_4" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="heading-ttl">
+            <p>Register for Containers Workshop</p>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <iframe class="embed-responsive-item" src="https://konfhub.com/event/#/widget/acd-containers" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+ <!-- Iframe RegisterIframe_4 Close  -->
+
+<!-- Iframe RegisterIframe_3 Start  -->
+<div id="RegisterIframe_3" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="heading-ttl">
+          <p>Register for MACHINE LEARNING Workshop</p>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <iframe class="embed-responsive-item" src="https://konfhub.com/event/#/widget/acd-ml" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Iframe RegisterIframe_3 Close  -->
+
+<!-- Iframe RegisterIframe_1 Start  -->
+<div id="RegisterIframe_1" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="heading-ttl">
+          <p>Register for SERVERLESS Workshop</p>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <iframe class="embed-responsive-item" src="https://konfhub.com/event/#/widget/acd-serverless" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Iframe RegisterIframe_1 Close  -->
+
+<!-- Iframe RegisterIframe_2 Start  -->
+<div id="RegisterIframe_2" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="heading-ttl">
+          <p>Register for ALEXA Workshop</p>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <iframe class="embed-responsive-item" src="https://konfhub.com/event/#/widget/acd-alexa" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Iframe RegisterIframe_2 Close  -->
+
+
+
+
   <div id="snackbar"> Thanks, Your registration has been done successfully. </div>
+
   <script type="text/javascript">
     var latt = 12.9767814;
     var lngg = 77.6197088;
@@ -2128,10 +2308,11 @@
           document.getElementById("idChk-normal").checked = true;
           document.getElementById("register-btn").disabled = false;
           $('#register').modal('hide');
-          // snackbar alert open 
+        //   // snackbar alert open 
           var x = document.getElementById("snackbar");
           x.className = "show";
           setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
+          $("#workshop_modal").modal()
         });
       } else {
         [].forEach.call(document.querySelectorAll('.error'), function (el) {
@@ -2139,7 +2320,7 @@
         });
         return false
       }
-    })
+    });
   </script>
 
 

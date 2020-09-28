@@ -2496,6 +2496,14 @@ ul.circle li {
   background-image: url(../images/ambs/aman_seth.jpg);
   background-size: cover;
 }
+#page .section-9 .ambassadors .vl-i .person[data-fname="Adit"] .img {
+  background-image: url(../images/ambs/adit_modi.png);
+  background-size: cover;
+}
+#page .section-9 .ambassadors .vl-i .person[data-fname="Sumanth"] .img {
+  background-image: url(../images/ambs/Sumanth_Kokkula.jpg);
+  background-size: cover;
+}
 
 /* #page .section-9 .ambassadors .vl-i .person[data-fname="Amit"] .img {
   background-image: url(../images/ambs/amit_tomar.jpg);

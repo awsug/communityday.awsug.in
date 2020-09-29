@@ -3571,3 +3571,7 @@ transition:.2s all;
   background: rgb(255, 255, 255);
   padding: 10px 0px;
 }
+
+.check-cloud {
+  margin-bottom: -20px;
+}

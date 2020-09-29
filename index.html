@@ -2035,6 +2035,13 @@
                 <span class="span-input">City <span class="text-danger">*</span></span>
               </label>
             </div>
+            <div class="consent-row check-cloud">
+                <span class="switch">
+                  <input type="checkbox" name="trainingCloud" class="switch" id="training-check" checked value="true">
+                  <label for="training-check">I am interested in AWS Training Offer from Trainocate Cloud Academy.</label>
+                </span>
+              </div>
+          
             <div class="consent-row">
               <span class="switch">
                 <input type="checkbox" name="consent" class="switch" id="idChk-normal" checked value="true">
@@ -2288,7 +2295,10 @@
       cb = $(this);
       cb.val(cb.prop('checked'));
     });
-
+    $('#training-check').change(function () {
+      cb = $(this);
+      cb.val(cb.prop('checked'));
+    });
     $('form').submit(function (event) {
       event.preventDefault();
       var name = document.getElementById("name").value;
@@ -2298,6 +2308,9 @@
 
       var city = document.getElementById("city").value;
       var consent = document.getElementById("idChk-normal").value;
+      var trainingCloud = document.getElementById("training-check").value;
+     
+     
       let utm = {};
       if (location.search) {
         const urlParams = new URLSearchParams(location.search);
@@ -2317,8 +2330,9 @@
       }
       let dataBody = {
         "user_details":
-          [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city }, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }],
+          [{ "name": name, "email_id": email, "designation": designation, "organisation": organisation, "phone_number": phone, "consent": consent, "form_details": { 'city': city, 'I am interested in AWS Training Offer from Trainocate Cloud Academy (contact me)': trainingCloud}, "ticket_details": [{ "name": "Conference Ticket", "id": "dt1", "price": 0 }], "ticket_name": "Conference Ticket", "ticket_price": 0 }],
       };
+    
       if (location.search) {
         dataBody['utm'] = utm
       }

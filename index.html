@@ -346,8 +346,8 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="heading-ttl">
-          <p>Workshops</p>
-          <p>[ALL THE WORKSHOPS ARE ONLINE]</p>
+          <p>Workshops [ALL THE WORKSHOPS ARE ONLINE]</p>
+          
         </h4>
       </div>
       <div class="modal-body">
@@ -355,7 +355,10 @@
           <div class="section section-tickets text-center inv">
             <div class="container">
               <h4 class="main-heading-ttl text-center workshop_title">Thank you for the registration.</h4>
-              <h4 class="main-heading-ttl text-center workshop_title">WE ALSO HAVE FOUR AWSOME WORKSHOPS ON 17th OCT</h4>
+              <h5 class="Referral-link-caption">Please share your unique  <a id="referral_link" target="_blank">Referral Link</a> to stand a chance to win exciting prizes.
+                <br> Check here <a href="https://awsugin.konfhub.com" target="_blank">https://awsugin.konfhub.com</a>  for details. </h5>
+                <hr>
+              <h4 class="main-heading-ttl text-center workshop_title">WE ALSO HAVE FOUR AWESOME WORKSHOPS ON 17th OCT</h4>
               <div class="row flex-it">
 
                 <div class="col-md-3">
@@ -2358,11 +2361,14 @@
           document.getElementById("idChk-normal").checked = true;
           document.getElementById("register-btn").disabled = false;
           $('#register').modal('hide');
-        //   // snackbar alert open 
+          // snackbar alert open 
           var x = document.getElementById("snackbar");
           x.className = "show";
           setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
-          $("#workshop_modal").modal()
+          $("#workshop_modal").modal();
+          var aTag =  document.getElementById("referral_link");
+          var bookingId = (response && response.booking_id) ? response.booking_id : null;
+          aTag.href = "https://communityday.awsug.in/?utm_source="+ bookingId +"&utm_medium=email&utm_campaign=referral";
         });
       } else {
         [].forEach.call(document.querySelectorAll('.error'), function (el) {
@@ -2372,8 +2378,6 @@
       }
     });
   </script>
-
-
 </body>
 
 </html>

@@ -3571,3 +3571,13 @@ transition:.2s all;
   background: rgb(255, 255, 255);
   padding: 10px 0px;
 }
+
+.check-cloud {
+  margin-bottom: -20px;
+}
+.Referral-link-caption{
+  font-size: 20px;
+  margin-top: -15px;
+  line-height: 1.5;
+  color: #111;
+}

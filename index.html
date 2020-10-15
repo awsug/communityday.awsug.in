@@ -126,21 +126,15 @@
                   </div>
                 </div>
               </div>
+              
               <div class="right_in">
-                <p class="awsugblr_logo">
-                  <img src="images/ug-logo-for-profile-pic-dark.png" class="img-responsive w-50" />
-                </p>
-                <p class="enlarge">
- 
-                </p>
-                <div class="register-btn-section-right">
-                  <button class="white icon-grp_ rt" data-toggle="modal" data-target="#register">
-                    Register
-                  </button>
-                  
-                </div>
+                  <iframe width="450px" height="350px" id="livetrack" src="https://www.youtube.com/embed/P5FsXl3wxvk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+                  <div style="text-align: center;">
+                    <button onclick='changeTrack("https://www.youtube.com/embed/P5FsXl3wxvkk", "orange", "gray")' id="track1btn">Keynote/Track1</button>
+                    <button onclick='changeTrack("https://www.youtube.com/embed/N2I8a9jzixY", "gray", "orange")' style="background: gray;" id="track2btn">Track2</button>
+                  </div>
               </div>
-              <!-- <div class="right_in">
+               <!-- <div class="right_in">
                 <p class="awsugblr_logo">
                   <img src="./images/awsugblr_logo.png" />
                 </p>
@@ -153,8 +147,8 @@
                 <button class="white icon-grp rt" id="link">
                   EXPLORE 2018
                   <i class="icon large ion-md-play-circle"></i>
-                </button>
-              </div> -->
+                </button>-->
+              
             </div>
           </div>
         </div>
@@ -165,6 +159,9 @@
           <a class="buy-ticket-link disabled button" >Sold Out</a>
         </li> -->
         <ul>
+          <!--<li>
+            <a href="#home" style="background-color: red; font-size: 2em; font-weight: bold;">LIVE</a>
+          </li> -->
           <li>
             <a href="#com_info">About Community Day</a>
           </li>
@@ -979,8 +976,25 @@
                   </div>
                 </div>
               </div>
+
               <div class="tbody">
-                
+                <div class="tr">
+                <div class="td idx">
+                    <div>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p><a target="_blank" href="https://www.youtube.com/embed/P5FsXl3wxvkk">Watch on YouTube</a></p>
+                    </div>
+                  </div>
+
+                  <div class="td" colspan="4">
+                    <div>
+                      <p><a target="_blank" href="https://www.youtube.com/embed/N2I8a9jzixY">Watch on YouTube</a></p>
+                    </div>
+                  </div>
+               </div>
                 <div class="tr">
                   <div class="td idx">
                     <div>
@@ -2428,6 +2442,12 @@
         return false
       }
     });
+
+    function changeTrack(track, track1color, track2color){
+      document.getElementById("livetrack").src = track; 
+      document.getElementById("track1btn").style.background = track1color;     
+      document.getElementById("track2btn").style.background = track2color;
+    }
 
     function checkEmail(formSubmit){
       document.getElementById("emailStatus").innerHTML = "";
